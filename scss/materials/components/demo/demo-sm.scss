@@ -1,0 +1,8 @@
+// These styles will only apply in breakpoint sm and larger
+
+// Import helpers to use in this component
+@use '../../../helpers' as *;
+
+.demo {
+  padding: size(4); // Set spacing or size using size()
+}

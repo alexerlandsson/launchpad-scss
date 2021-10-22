@@ -1,0 +1,9 @@
+@mixin font-regular {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-medium {
+  font-family: sans-serif;
+  font-weight: 500;
+}

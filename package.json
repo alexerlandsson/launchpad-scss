@@ -1,0 +1,19 @@
+{
+  "name": "scss-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Sass (scss).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./scss/styles.scss ./compiled/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@personal.github.com:alexerlandsson/scss-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.3"
+  }
+}

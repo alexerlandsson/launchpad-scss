@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+$breakpoints: (
+  'lt-sm': (max-width: var(breakpoint, sm) - 1),
+  'sm': (min-width: var(breakpoint, sm)),
+  'lt-md': (max-width: var(breakpoint, md) - 1),
+  'md': (min-width: var(breakpoint, md)),
+  'lt-lg': (max-width: var(breakpoint, lg) - 1),
+  'lg': (min-width: var(breakpoint, lg)),
+);
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+      + 'Available breakpoints are: #{map-keys($breakpoints)}.';
+  }
+}

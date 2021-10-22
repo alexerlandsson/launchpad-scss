@@ -1,0 +1,11 @@
+@mixin columns($value...) {
+  -webkit-columns: $value;
+  -moz-columns: $value;
+  columns: $value;
+}
+
+@mixin column-gap($value) {
+  -webkit-column-gap: $value;
+  -moz-column-gap: $value;
+  column-gap: $value;
+}

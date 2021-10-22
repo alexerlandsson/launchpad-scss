@@ -1,0 +1,44 @@
+@mixin animation($value...) {
+  -webkit-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-delay($delay: 0s) {
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@mixin animation-direction($direction: normal) {
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin animation-duration($duration: 0s) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+@mixin animation-fill-mode($fill-mode: none) {
+  -webkit-animation-fill-mode: $fill-mode;
+  animation-fill-mode: $fill-mode;
+}
+
+@mixin animation-iteration-count($iteration-count: 1) {
+  -webkit-animation-iteration-count: $iteration-count;
+  animation-iteration-count: $iteration-count;
+}
+
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin animation-play-state($play-state: running) {
+  -webkit-animation-play-state: $play-state;
+  animation-play-state: $play-state;
+}
+
+@mixin animation-timing-function($timing-function: ease) {
+  -webkit-animation-timing-function: $timing-function;
+  animation-timing-function: $timing-function;
+}

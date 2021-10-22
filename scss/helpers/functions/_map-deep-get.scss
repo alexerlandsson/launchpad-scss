@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+// This function is used to fetch deeply nested values from a map
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    @if map-has-key($map, $key) {
+      $map: map-get($map, $key);
+    }
+
+    @else {
+      @error '@function map-deep-get: Key not found in map';
+    }
+  }
+
+  @return $map;
+}

@@ -1,0 +1,47 @@
+@use '../functions' as *;
+
+$containerMaxWidth: 650px;
+$containerGutter: size(3);
+
+// This map is used to declare variables
+$variables: (
+  size: (
+    inputHeight: 50px,
+    container: (
+      maxWidth: $containerMaxWidth + $containerGutter * 2,
+      gutter: $containerGutter,
+    ),
+  ),
+  breakpoint: (
+    sm: 600px,
+    md: 900px,
+    lg: 1200px,
+  ),
+  font: (
+    lineHeight: (
+      main: 1.5,
+      alt: 1.2,
+    ),
+    size: (
+      xsmall: 0.75rem,
+      small: 0.875rem,
+      regular: 1rem,
+      large: 1.125rem,
+      xlarge: 1.5rem,
+    ),
+  ),
+  animation: (
+    duration: (
+      fast: 150ms,
+      default: 200ms,
+      slow: 300ms,
+      xslow: 400ms,
+    ),
+    cubicbezier: cubic-bezier(0.47, 1.64, 0.41, 0.8),
+  ),
+);
+
+// This function is used to use variables in the project
+@function var($keys...) {
+  @return map-deep-get($variables, $keys...);
+}

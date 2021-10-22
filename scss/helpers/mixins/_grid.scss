@@ -1,0 +1,37 @@
+@mixin grid-display($display: grid) {
+  // sass-lint:disable-block no-duplicate-properties
+  display: -ms-#{$display};
+  display: #{$display};
+}
+
+@mixin grid-template-columns($columns...) {
+  -ms-grid-columns: $columns;
+  grid-template-columns: $columns;
+}
+
+@mixin grid-template-rows($rows...) {
+  -ms-grid-rows: $rows;
+  grid-template-rows: $rows;
+}
+
+@mixin grid-column($start, $span: 1) {
+  -ms-grid-column: $start;
+  -ms-grid-column-span: $span;
+  grid-column: $start / span $span;
+}
+
+@mixin grid-row($start, $span: 1) {
+  -ms-grid-row: $start;
+  -ms-grid-row-span: $span;
+  grid-row: $start / span $span;
+}
+
+@mixin grid-align-self($align: auto) {
+  -ms-grid-row-align: $align;
+  align-self: $align;
+}
+
+@mixin grid-justify-self($justify: auto) {
+  -ms-grid-column-align: $justify;
+  justify-self: $justify;
+}

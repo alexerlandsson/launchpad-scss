@@ -1,0 +1,77 @@
+@use '../functions/' as *;
+
+// Color Definition
+
+// This map is used to define all colors used in this project
+$colorDefs: (
+  black: #141414,
+  white: #fff,
+  gray: #bfbfbf,
+  grayLight: #f0f0f0,
+  grayDark: #8a8a8e,
+  brand: (
+    blue: #284e80,
+    blueLight: #dde5ed,
+    gray: #f0f0f0,
+  ),
+  ui: (
+    green: #347657,
+    greenLight: #c5d5d0,
+    red: #db7058,
+    redLight: #edd8d3,
+  ),
+);
+
+// Function used to get colors from $colorDefs in $colors
+@function colorDefs($keys...) {
+  @return map-deep-get($colorDefs, $keys...);
+}
+
+// Color Map
+
+// This map is used to declare variables to use for colors
+$colors: (
+  brand: (
+    primary: (
+      main: colorDefs(brand, blue),
+      text: colorDefs(white),
+    ),
+    secondary: (
+      main: colorDefs(brand, blueLight),
+      text: colorDefs(brand, blue),
+    ),
+  ),
+  bg: (
+    main: colorDefs(white),
+    alt: colorDefs(grayLight),
+  ),
+  text: (
+    main: colorDefs(black),
+    alt: colorDefs(grayDark),
+  ),
+  link: (
+    main: colorDefs(brand, blue),
+  ),
+  border: (
+    main: colorDefs(gray),
+  ),
+  ui: (
+    success: (
+      main: colorDefs(ui, greenLight),
+      text: colorDefs(ui, green),
+    ),
+    error: (
+      main: colorDefs(ui, redLight),
+      text: colorDefs(ui, red),
+    ),
+  ),
+  disabled: (
+    bg: colorDefs(grayLight),
+    text: colorDefs(grayDark),
+  ),
+);
+
+// This function is used to use colors in the project
+@function color($keys...) {
+  @return map-deep-get($colors, $keys...);
+}

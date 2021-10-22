@@ -1,0 +1,19 @@
+@use "sass:list";
+@use '../functions' as *;
+
+// Positions
+$CSS_POSITIONS_X: left, center, right;
+$CSS_POSITIONS_Y: top, middle, bottom;
+$CSS_POSITIONS: list.join($CSS_POSITIONS_X, $CSS_POSITIONS_Y, $separator: comma);
+
+// This map is used to declare constants
+$constants: (
+  CSS_POSITIONS_X: $CSS_POSITIONS_X,
+  CSS_POSITIONS_Y: $CSS_POSITIONS_Y,
+  CSS_POSITIONS: $CSS_POSITIONS,
+);
+
+// This function is used to use constants in the project
+@function const($keys...) {
+  @return map-deep-get($constants, $keys...);
+}
