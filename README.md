@@ -83,10 +83,6 @@ To use these functions in other files, use the functions exposed and imported us
 @use '../../../helpers/functions' as *;
 ```
 
-##### Map Deep Get
-
-This is a helper function used to fetch values from a deeply nested _scss_ map. It is mainly used in other functions in `helpers`.
-
 ##### Size
 
 Size is a useful function used to create spacing in the project. This function is found in `helpers/functions/_size.scss` and should be used everywhere where a value is set in `px`.
