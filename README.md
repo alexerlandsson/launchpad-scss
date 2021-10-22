@@ -170,7 +170,7 @@ These constants could be useful when positioning a modular component for intance
 The example above refers to the variable `CSS_POSITIONS_X` defined in the `$contants` map:
 
 ```scss
-$CSS_POSITIONS_X: left, center, right; // This variable is hidden using @forward
+$CSS_POSITIONS_X: left, center, right; // This variable is not exposed using @forward
 
 $contants: (
   CSS_POSITIONS_X: $CSS_POSITIONS_X,

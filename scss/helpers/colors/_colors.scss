@@ -24,7 +24,7 @@ $colorDefs: (
 
 // Function used to get colors from $colorDefs in $colors
 @function colorDefs($keys...) {
-  @return map-deep-get($colorDefs, $keys...);
+  @return map-get($colorDefs, $keys...);
 }
 
 // Color Map
@@ -73,5 +73,5 @@ $colors: (
 
 // This function is used to use colors in the project
 @function color($keys...) {
-  @return map-deep-get($colors, $keys...);
+  @return map-get($colors, $keys...);
 }

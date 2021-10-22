@@ -43,5 +43,5 @@ $variables: (
 
 // This function is used to use variables in the project
 @function var($keys...) {
-  @return map-deep-get($variables, $keys...);
+  @return map-get($variables, $keys...);
 }

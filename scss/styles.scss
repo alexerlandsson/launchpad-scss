@@ -1,30 +1,13 @@
 @use 'sass:meta';
+@use 'sass:map';
 @use 'helpers/media-query' as mq;
 
 @include meta.load-css('imports/imports');
 
-@include mq.breakpoint('sm') {
-  @include meta.load-css('imports/imports-sm');
-}
-
-@include mq.breakpoint('lt-sm') {
-  @include meta.load-css('imports/imports-lt-sm');
-}
-
-@include mq.breakpoint('md') {
-  @include meta.load-css('imports/imports-md');
-}
-
-@include mq.breakpoint('lt-md') {
-  @include meta.load-css('imports/imports-lt-md');
-}
-
-@include mq.breakpoint('lg') {
-  @include meta.load-css('imports/imports-lg');
-}
-
-@include mq.breakpoint('lt-lg') {
-  @include meta.load-css('imports/imports-lt-lg');
+@each $breakpoint in map.keys(mq.$breakpoints) {
+  @include mq.breakpoint(#{$breakpoint}) {
+    @include meta.load-css('imports/imports-#{$breakpoint}');
+  }
 }
 
 @include mq.print {

@@ -15,5 +15,5 @@ $constants: (
 
 // This function is used to use constants in the project
 @function const($keys...) {
-  @return map-deep-get($constants, $keys...);
+  @return map-get($constants, $keys...);
 }
