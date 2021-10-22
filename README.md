@@ -29,7 +29,7 @@ This folder contains all information about colors used in the project. Colors ar
 
 Use the map `$colorDefs` to define the color codes and then use these colors in `$colors` in combination with the color name you will use to reference that color in other files.
 
-To use colors in other files, use the function `color()` are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
 ```scss
 @use '../../../helpers/colors' as *;
@@ -43,7 +43,7 @@ When __colors__ is imported, set the color using the `color()` function. This fu
 }
 ```
 
-The example above refers to the variable `$colors.text.main` defined in the `$colors` map:
+The example above refers to the variable `text.main` defined in the `$colors` map:
 
 ```scss
 $colors: (
@@ -105,7 +105,7 @@ This folder contains all information about media queries used in the project.
 
 Breakpoints are defined in `helpers/media-query/_breakpoint.scss`. This is the place where you can add or remove breakpoints.
 
-> __Important:__ The mixins in this folder are used in `styles.scss` and should not be used anywhere else.
+> __Important:__ The mixins in this folder are used in `styles.scss` and should __not__ be used anywhere else. Read more about why in the _imports_ section.
 
 ### mixins
 
@@ -120,6 +120,62 @@ To use these mixins in other files, use the mixins exposed and imported using th
 ### variables
 
 This folder contains all global variables used in the project.
+
+To use variables in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+
+```scss
+@use '../../../helpers/variables' as *;
+```
+
+#### variables
+
+Global variables are defined in the map `$variables` found in `helpers/variables/_variables.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
+
+```scss
+.foo {
+  font-size: var(font, size, large);
+}
+```
+
+The example above refers to the variable `font.size.large` defined in the `$variables` map:
+
+```scss
+$variables: (
+  font: (
+    size: (
+      large: 1.125rem,
+    ),
+  ),
+);
+```
+
+#### constans
+
+Constants are located in `helpers/variables/_constants.scss` and includes variables that are bound to _CSS_ itself.
+
+Constants are defined in the _scss_ map `$contants` and used using the exposed function `const()`. This function can fetch values from a deep nested scss map.
+
+These constants could be useful when positioning a modular component for intance. The example below uses the constant `CSS_POSITIONS_X` to add modifiers for text alignment.
+
+```scss
+.foo {
+  @each $value in const(CSS_POSITIONS_X) {
+    &--align-#{$value} {
+      text-align: $value;
+    }
+  }
+}
+```
+
+The example above refers to the variable `CSS_POSITIONS_X` defined in the `$contants` map:
+
+```scss
+$CSS_POSITIONS_X: left, center, right; // This variable is hidden using @forward
+
+$contants: (
+  CSS_POSITIONS_X: $CSS_POSITIONS_X,
+);
+```
 
 ## imports
 
