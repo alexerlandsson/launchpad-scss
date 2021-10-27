@@ -221,7 +221,7 @@ Materials is the building blocks in the project. Each material should be based o
 
 Materials is split into two parts; _componets_ and _layout_. They are both containing components, but separated to make the structure easier. This is the place where the majority of the work is done.
 
-> __Important:__ It is important to name the components and thier breakpoint folders correctly. The folder and default _scss_ file should both be named as the comopnent itself. Breakpoint specific _scss_ files should be suffixed with `*-[BREAKPOINT] ([COMPONENT_NAME]-[BREAKPOINT].scss)`. If the components is named `demo`. The breakpoint file for the `sm` breakpoint should be named `demo-sm.scss`.
+> __Important:__ It is important to name the components and thier breakpoint folders correctly. The folder and default _scss_ file should both be named as the comopnent itself. Breakpoint specific _scss_ files should be suffixed with `*-[BREAKPOINT]` (`[COMPONENT_NAME]-[BREAKPOINT].scss`). If the components is named `demo`. The breakpoint file for the `sm` breakpoint should be named `demo-sm.scss`.
 
 ### components
 
