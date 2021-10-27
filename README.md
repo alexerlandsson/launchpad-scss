@@ -2,6 +2,36 @@
 
 This is my boilerplate I use in projects to maintain a well structured and scalable _scss_.
 
+## Methodology
+
+The design of this boilerplate is based on the _CSS_ mothodology __BEM__.
+
+The following is an example of how a component could be structured.
+
+```html
+<div class="foo foo--alternative">
+  <div class="foo__bar">
+    <!-- HTML -->
+  <div>
+</div>
+```
+
+In the example above, `.foo` is the name of the component (_block_). `.foo__bar` is a child _element_. `.foo--alternative` is a _modifier_. To convert this into _scss_ it could look like this:
+
+```scss
+.foo {
+  color: #000;
+
+  &--altenative {
+    color: #757575;
+  }
+
+  &__bar {
+    margin-bottom: 8px;
+  }
+}
+```
+
 ## Structure
 
 The _scss_ is structured in four main folders with `styles.scss` as a main input file.
@@ -175,19 +205,43 @@ $contants: (
 
 ## imports
 
-Coming soon...
+Imports are located in `imports` and this is where all components are imported.
+
+To minimize unnecessary _CSS_ for media queries, each media query for the breakpoints are only declared once. Breakpoint specific files are then imported in the correct import file.
+
+Each component should include a _scss_ file for each breakpoint it uses. These breakpoint files are imported in `imports` using _scss_ `@use` rule.
+
+As an example, `demo.scss` is the default _scss_ file for that component. This file contains styling across all breakpoints. This file is imported in `imports/imports.scss`. The breakpoint specific file in the same component, `demo-sm.scss`, contains styling used in the `sm` breakpoint (and larger) and is imported in `imports/imports-sm.scss`.
+
+To summarize, breakpoint media quieries may __not__ be included in any components, but be handled in `imports` instead.
 
 ## materials
 
-Coming soon...
+Materials is the building blocks in the project. Each material should be based on the lowest common dominator. A material is modular and could be used by iteself, inside other materials or in combination with other materials.
+
+Materials is split into two parts; _componets_ and _layout_. They are both containing components, but separated to make the structure easier. This is the place where the majority of the work is done.
+
+> __Important:__ It is important to name the components and thier breakpoint folders correctly. The folder and default _scss_ file should both be named as the comopnent itself. Breakpoint specific _scss_ files should be suffixed with `*-[BREAKPOINT] ([COMPONENT_NAME]-[BREAKPOINT].scss)`. If the components is named `demo`. The breakpoint file for the `sm` breakpoint should be named `demo-sm.scss`.
+
+### components
+
+Components are found in `materials/components`. Each folder in this location component represents a component. Each component consists of one or more _scss_ files (one for each breakpoint).
+
+> A demo component is used in this boilerplate called `demo` to demonstrate how it is supposed to work.
+
+### layout
+
+Components that are used for layout purposes only should be placed in `materials/layout`. Other than that, the same rules as for _components_ applies here.
+
+> The layout component `container` is included in this boilerplate as an example of what a layout material is. This is also a very useful component in most projects.
 
 ## partials
 
-Coming soon...
+Partials contains styling aimed at elements and global styling, such as base styling, keyframes and reset _CSS_.
 
-## Compile
+## Compile into CSS
 
-Compile the _scss_ in this project by running the following commands.
+Compile the _scss_ in this project into _CSS_ by running the following commands.
 
 ```bash
 npm install
@@ -197,4 +251,4 @@ npm install
 npm run sass
 ```
 
-The script will output a CSS file at `compiled/styles.css`.
+The script will output a _CSS_ file at `compiled/styles.css`.
