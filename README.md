@@ -227,7 +227,7 @@ Materials is split into two parts; _componets_ and _layout_. They are both conta
 
 Components are found in `materials/components`. Each folder in this location component represents a component. Each component consists of one or more _scss_ files (one for each breakpoint).
 
-> A demo component is used in this boilerplate called `demo` to demonstrate how it is supposed to work.
+> A demo component is included in this boilerplate called `demo` to demonstrate how a component is supposed to be built.
 
 ### layout
 

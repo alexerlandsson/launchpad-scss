@@ -16,4 +16,14 @@
       text-align: $value;
     }
   }
+
+  // This selector creates an "element" with the class name .demo__child
+  &__child {
+    background-color: color(bg, main);
+
+    // This selector create a "modifier" with the class name .demo__child--modified
+    &--modified {
+      background-color: color(bg, alt);
+    }
+  }
 }
