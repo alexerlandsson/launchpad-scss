@@ -1,4 +1,5 @@
 @use "sass:list";
+@use 'sass:map';
 @use '../functions' as *;
 
 // Positions
@@ -15,5 +16,5 @@ $constants: (
 
 // This function is used to use constants in the project
 @function const($keys...) {
-  @return map-get($constants, $keys...);
+  @return map.get($constants, $keys...);
 }

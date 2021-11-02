@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../functions' as *;
 
 $containerMaxWidth: 650px;
@@ -43,5 +44,5 @@ $variables: (
 
 // This function is used to use variables in the project
 @function var($keys...) {
-  @return map-get($variables, $keys...);
+  @return map.get($variables, $keys...);
 }
