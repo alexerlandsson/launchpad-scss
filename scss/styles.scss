@@ -1,15 +1,21 @@
+/// This is the entry point for the boilerplate. All files
+/// in the boilerplate are loaded into this file.
+
 @use 'sass:meta';
 @use 'sass:map';
-@use 'helpers/media-query' as mq;
+@use 'helpers/media-query' as *;
 
+// Include non-breakpoint specific styling
 @include meta.load-css('imports/imports');
 
-@each $breakpoint in map.keys(mq.$breakpoints) {
-  @include mq.breakpoint(#{$breakpoint}) {
+// Include breakpoint specific styling
+@each $breakpoint in map.keys($breakpoints) {
+  @include breakpoint(#{$breakpoint}) {
     @include meta.load-css('imports/imports-#{$breakpoint}');
   }
 }
 
-@include mq.print {
+// Include print styling
+@include print {
   @include meta.load-css('partials/print/print');
 }
