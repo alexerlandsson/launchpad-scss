@@ -12,7 +12,7 @@
     "url": "git@personal.github.com:alexerlandsson/scss-boilerplate.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "sass": "^1.43.3"
   }
