@@ -1,4 +1,4 @@
-# scss-boilerplate
+# SCSS Boilerplate
 
 This is my boilerplate for _Sass (scss)_ I use in projects to maintain a well structured and scalable _CSS_.
 
