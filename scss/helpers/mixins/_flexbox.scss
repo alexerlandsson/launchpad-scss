@@ -1,14 +1,12 @@
 /// Mixins used to prefix flexbox related properties
 
 @mixin flex-display {
-  // sass-lint:disable-block no-duplicate-properties
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @mixin inline-flex-display {
-  // sass-lint:disable-block no-duplicate-properties
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

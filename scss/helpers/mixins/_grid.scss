@@ -1,7 +1,6 @@
 /// Mixins used to prefix grid related properties
 
 @mixin grid-display($display: grid) {
-  // sass-lint:disable-block no-duplicate-properties
   display: -ms-#{$display};
   display: #{$display};
 }
