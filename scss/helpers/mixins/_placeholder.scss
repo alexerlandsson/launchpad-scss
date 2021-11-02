@@ -1,3 +1,5 @@
+/// Mixin used to add styling to input placeholder
+
 @mixin placeholder {
   &::-webkit-input-placeholder {
     @content;

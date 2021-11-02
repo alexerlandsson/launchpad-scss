@@ -1,3 +1,5 @@
+/// Mixin used to prefix the keyframes property
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;

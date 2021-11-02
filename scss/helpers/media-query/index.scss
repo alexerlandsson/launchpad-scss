@@ -1,2 +1,6 @@
+/// Forwards all media queries files. To access them in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/media-query' as *;
+
 @forward 'breakpoint' show breakpoint, $breakpoints;
 @forward 'print';

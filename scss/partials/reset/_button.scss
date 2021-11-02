@@ -1,19 +1,21 @@
+/// Reset styling on the button element
+
 @use '../../helpers' as *;
 
 button {
+  @include flex-display();
+  @include align-items(center);
   @include font-regular();
-  display: flex;
-  align-items: center;
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  font-size: 1rem;
+  font-size: var(font, size, regular);
   color: currentColor;
   line-height: var(font, lineHeight, main);
   text-align: center;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }

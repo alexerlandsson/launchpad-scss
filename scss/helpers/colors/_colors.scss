@@ -1,3 +1,8 @@
+/// All colors used across the projects should be declared in this file.
+/// Declare the color codes in $colorDefs and assign them to abstract
+/// variable names in $colors which are the colors used in the project.
+/// The colors are then fetched using the color() function.
+
 @use 'sass:map';
 @use '../functions/' as *;
 

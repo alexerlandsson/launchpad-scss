@@ -1,3 +1,5 @@
+/// Base styling
+
 @use '../../helpers' as *;
 
 * {
@@ -17,7 +19,7 @@ body {
   @include font-regular;
   margin: 0;
   background-color: color(bg, main);
-  font-size: 1rem;
+  font-size: var(font, size, regular);
   line-height: var(font, lineHeight, main);
   color: color(text, main);
   -webkit-font-smoothing: antialiased;

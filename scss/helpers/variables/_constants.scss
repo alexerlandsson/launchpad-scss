@@ -1,3 +1,7 @@
+/// Constants to use across the project
+/// Declare constants in the $constants map and fetch
+/// a constant using the const() function.
+
 @use "sass:list";
 @use 'sass:map';
 @use '../functions' as *;

@@ -1,1 +1,5 @@
+/// Forwards the font settings. To access the fonts in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/font' as *;
+
 @forward 'font';

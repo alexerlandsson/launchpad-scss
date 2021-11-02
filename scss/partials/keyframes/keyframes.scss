@@ -1,3 +1,5 @@
+/// Global keyframes to use in multiple materials
+
 @use '../../helpers/mixins' as *;
 
 @include keyframes(noTransform) {

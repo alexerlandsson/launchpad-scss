@@ -1,3 +1,5 @@
+/// Mixins used to prefix mask related properties
+
 @mixin mask-image($url) {
   -webkit-mask-image: $url;
   mask-image: $url;

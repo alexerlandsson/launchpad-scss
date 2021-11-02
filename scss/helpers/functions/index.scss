@@ -1,1 +1,5 @@
+/// Forwards all functions. To access them in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/functions' as *;
+
 @forward 'size';

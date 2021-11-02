@@ -1,3 +1,5 @@
+/// Mixins used to prefix columns related properties
+
 @mixin columns($value...) {
   -webkit-columns: $value;
   -moz-columns: $value;

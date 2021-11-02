@@ -1,3 +1,5 @@
+/// Mixins used to prefix animation related properties
+
 @mixin animation($value...) {
   -webkit-animation: $value;
   animation: $value;

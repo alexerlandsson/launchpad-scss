@@ -1,3 +1,5 @@
+/// Mixin used to set user-select
+
 @mixin user-select($value) {
   -webkit-user-select: $value;
   -moz-user-select: $value;

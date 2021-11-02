@@ -1,3 +1,7 @@
+/// Forwards all mixins. To access them in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/mixins' as *;
+
 @forward 'animation';
 @forward 'columns';
 @forward 'flexbox';
@@ -6,6 +10,5 @@
 @forward 'mask';
 @forward 'overflow';
 @forward 'transform';
-@forward 'unselectable';
 @forward 'user-select';
 @forward 'placeholder';

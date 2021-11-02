@@ -1,3 +1,5 @@
+/// Mixins used to prefix flexbox related properties
+
 @mixin flex-display {
   // sass-lint:disable-block no-duplicate-properties
   display: -webkit-box;

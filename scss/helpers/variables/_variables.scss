@@ -1,3 +1,7 @@
+/// Variables to use across the project.
+/// Declare variables in the $variables map and fetch
+/// a variable using the var() function.
+
 @use 'sass:map';
 @use '../functions' as *;
 

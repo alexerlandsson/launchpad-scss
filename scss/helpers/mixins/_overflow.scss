@@ -1,3 +1,5 @@
+/// Mixin used to add smooth touch overflow scroll to webkit browsers
+
 @mixin overflow-auto {
   overflow: auto;
   -webkit-overflow-scrolling: touch;

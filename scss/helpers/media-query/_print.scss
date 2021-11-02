@@ -1,3 +1,5 @@
+/// Mixin used to create a print media query
+
 @mixin print {
   @media print {
     @content;

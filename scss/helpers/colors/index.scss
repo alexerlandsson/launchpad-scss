@@ -1,1 +1,5 @@
+/// Forwards colors. To access the colors in other files,
+/// import this file using:
+/// @use '[path_to_helpers]/helpers/colors' as *;
+
 @forward 'colors' show color;
