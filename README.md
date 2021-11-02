@@ -1,3 +1,5 @@
+[![sass - v1.43.3](https://img.shields.io/badge/sass-v1.43.3-2ea44f)](https://www.npmjs.com/package/sass)
+
 # scss-boilerplate
 
 This is my boilerplate for _Sass (scss)_ I use in projects to maintain a well structured and scalable _CSS_.
@@ -254,3 +256,7 @@ npm run sass
 ```
 
 The script will output a _CSS_ file at `compiled/styles.css`.
+
+## License
+
+Hej
