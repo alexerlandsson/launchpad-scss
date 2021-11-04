@@ -3,19 +3,19 @@
 
 @use 'sass:meta';
 @use 'sass:map';
-@use 'helpers/media-query' as *;
+@use 'helpers/media-query' as mediaquery;
 
 // Include non-breakpoint specific styling
 @include meta.load-css('imports/imports');
 
 // Include breakpoint specific styling
-@each $breakpoint in map.keys($breakpoints) {
-  @include breakpoint(#{$breakpoint}) {
+@each $breakpoint in map.keys(mediaquery.$breakpoints) {
+  @include mediaquery.breakpoint(#{$breakpoint}) {
     @include meta.load-css('imports/imports-#{$breakpoint}');
   }
 }
 
 // Include print styling
-@include print {
+@include mediaquery.print {
   @include meta.load-css('partials/print/print');
 }
