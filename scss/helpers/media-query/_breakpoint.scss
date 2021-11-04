@@ -11,15 +11,14 @@ $breakpoint-defs: (
   lg: 1200px,
 );
 
-// Map used to create the breakpoints
-$breakpoints: (
-  'lt-sm': (max-width: map.get($breakpoint-defs, sm) - 1),
-  'sm': (min-width: map.get($breakpoint-defs, sm)),
-  'lt-md': (max-width: map.get($breakpoint-defs, md) - 1),
-  'md': (min-width: map.get($breakpoint-defs, md)),
-  'lt-lg': (max-width: map.get($breakpoint-defs, lg) - 1),
-  'lg': (min-width: map.get($breakpoint-defs, lg)),
-);
+// Map containing breakpoint media queries
+$breakpoints: ();
+
+// Assign breakpoint media queries to $breakpoints from $breakpoint-defs
+@each $breakpoint in map.keys($breakpoint-defs) {
+  $breakpoints: map.merge($breakpoints, ('lt-#{$breakpoint}': (max-width: map.get($breakpoint-defs, $breakpoint) - 1)));
+  $breakpoints: map.merge($breakpoints, ('#{$breakpoint}': (min-width: map.get($breakpoint-defs, $breakpoint))));
+}
 
 // Mixin used to create the breakpoint media queries
 @mixin breakpoint($breakpoint) {
