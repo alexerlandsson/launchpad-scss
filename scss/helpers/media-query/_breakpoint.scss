@@ -16,9 +16,13 @@ $breakpoint-defs: (
 $breakpoints: ();
 
 // Assign breakpoint media queries to $breakpoints from $breakpoint-defs
-@each $breakpoint in map.keys($breakpoint-defs) {
-  $breakpoints: map.merge($breakpoints, ('lt-#{$breakpoint}': (max-width: map.get($breakpoint-defs, $breakpoint) - 1)));
-  $breakpoints: map.merge($breakpoints, ('#{$breakpoint}': (min-width: map.get($breakpoint-defs, $breakpoint))));
+@if meta.variable-exists('breakpoint-defs') {
+  @each $breakpoint in map.keys($breakpoint-defs) {
+    $breakpoints: map.merge($breakpoints, ('lt-#{$breakpoint}': (max-width: map.get($breakpoint-defs, $breakpoint) - 1)));
+    $breakpoints: map.merge($breakpoints, ('#{$breakpoint}': (min-width: map.get($breakpoint-defs, $breakpoint))));
+  }
+} @else {
+  @warn 'Map $breakpoint-defs does not exists. No breakpoint media queries will be created.';
 }
 
 // Mixin used to create the breakpoint media queries
@@ -28,7 +32,6 @@ $breakpoints: ();
       @content;
     }
   } @else {
-    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
-      + 'Available breakpoints are: #{map.keys($breakpoints)}.';
+    @warn 'No value could be retrieved from `#{$breakpoint}`. Available breakpoints are: #{map.keys($breakpoints)}.';
   }
 }
