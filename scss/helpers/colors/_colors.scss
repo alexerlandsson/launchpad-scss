@@ -1,5 +1,5 @@
 /// All colors used across the projects should be declared in this file.
-/// Declare the color codes in $colorDefs and assign them to abstract
+/// Declare the color codes in $color-defs and assign them to abstract
 /// variable names in $colors which are the colors used in the project.
 /// The colors are then fetched using the color() function.
 
@@ -9,28 +9,28 @@
 // Color Definition
 
 // This map is used to define all colors used in this project
-$colorDefs: (
+$color-defs: (
   black: #141414,
   white: #fff,
   gray: #bfbfbf,
-  grayLight: #f0f0f0,
-  grayDark: #8a8a8e,
+  graylight: #f0f0f0,
+  graydark: #8a8a8e,
   brand: (
     blue: #284e80,
-    blueLight: #dde5ed,
+    bluelight: #dde5ed,
     gray: #f0f0f0,
   ),
   ui: (
     green: #347657,
-    greenLight: #c5d5d0,
+    greenlight: #c5d5d0,
     red: #db7058,
-    redLight: #edd8d3,
+    redlight: #edd8d3,
   ),
 );
 
-// Function used to get colors from $colorDefs in $colors
-@function colorDefs($keys...) {
-  @return map.get($colorDefs, $keys...);
+// Function used to get colors from $color-defs in $colors
+@function color-defs($keys...) {
+  @return map.get($color-defs, $keys...);
 }
 
 // Color Map
@@ -39,41 +39,41 @@ $colorDefs: (
 $colors: (
   brand: (
     primary: (
-      main: colorDefs(brand, blue),
-      text: colorDefs(white),
+      main: color-defs(brand, blue),
+      text: color-defs(white),
     ),
     secondary: (
-      main: colorDefs(brand, blueLight),
-      text: colorDefs(brand, blue),
+      main: color-defs(brand, bluelight),
+      text: color-defs(brand, blue),
     ),
   ),
   bg: (
-    main: colorDefs(white),
-    alt: colorDefs(grayLight),
+    main: color-defs(white),
+    alt: color-defs(graylight),
   ),
   text: (
-    main: colorDefs(black),
-    alt: colorDefs(grayDark),
+    main: color-defs(black),
+    alt: color-defs(graydark),
   ),
   link: (
-    main: colorDefs(brand, blue),
+    main: color-defs(brand, blue),
   ),
   border: (
-    main: colorDefs(gray),
+    main: color-defs(gray),
   ),
   ui: (
     success: (
-      main: colorDefs(ui, greenLight),
-      text: colorDefs(ui, green),
+      main: color-defs(ui, greenlight),
+      text: color-defs(ui, green),
     ),
     error: (
-      main: colorDefs(ui, redLight),
-      text: colorDefs(ui, red),
+      main: color-defs(ui, redlight),
+      text: color-defs(ui, red),
     ),
   ),
   disabled: (
-    bg: colorDefs(grayLight),
-    text: colorDefs(grayDark),
+    bg: color-defs(graylight),
+    text: color-defs(graydark),
   ),
 );
 

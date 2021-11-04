@@ -6,9 +6,7 @@
 @function size($multiplier: 1, $baseUnit: 8px) {
   @if meta.type-of($multiplier) == number {
     @return ($baseUnit * $multiplier);
-  }
-
-  @else {
+  } @else {
     @error '@function size(): $multiplier has to be a number';
   }
 }

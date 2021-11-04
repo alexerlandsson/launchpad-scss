@@ -2,25 +2,32 @@
 /// Breakpoint values are set in helpers/variables/_variables.scss.
 
 @use 'sass:map';
-@use '../variables' as *;
 
-$breakpoints: (
-  'lt-sm': (max-width: var(breakpoint, sm) - 1),
-  'sm': (min-width: var(breakpoint, sm)),
-  'lt-md': (max-width: var(breakpoint, md) - 1),
-  'md': (min-width: var(breakpoint, md)),
-  'lt-lg': (max-width: var(breakpoint, lg) - 1),
-  'lg': (min-width: var(breakpoint, lg)),
+// Definition of breakpoints. "Less than (lt)" breakpoints will be
+// created in $breakpoints based on these values
+$breakpoint-defs: (
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
 );
 
+// Map used to create the breakpoints
+$breakpoints: (
+  'lt-sm': (max-width: map.get($breakpoint-defs, sm) - 1),
+  'sm': (min-width: map.get($breakpoint-defs, sm)),
+  'lt-md': (max-width: map.get($breakpoint-defs, md) - 1),
+  'md': (min-width: map.get($breakpoint-defs, md)),
+  'lt-lg': (max-width: map.get($breakpoint-defs, lg) - 1),
+  'lg': (min-width: map.get($breakpoint-defs, lg)),
+);
+
+// Mixin used to create the breakpoint media queries
 @mixin breakpoint($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     @media #{inspect(map.get($breakpoints, $breakpoint))} {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
       + 'Available breakpoints are: #{map.keys($breakpoints)}.';
   }

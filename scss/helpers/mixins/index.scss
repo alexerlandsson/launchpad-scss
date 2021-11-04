@@ -4,7 +4,7 @@
 
 @forward 'animation';
 @forward 'columns';
-@forward 'flexbox';
+@forward 'flexbox' hide --direction-prefixes, --justify-content-prefixes, --align-self-prefixes, --align-items-prefixes;
 @forward 'grid';
 @forward 'keyframes';
 @forward 'mask';

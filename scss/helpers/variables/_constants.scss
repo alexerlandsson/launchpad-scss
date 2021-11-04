@@ -7,15 +7,15 @@
 @use '../functions' as *;
 
 // Positions
-$CSS_POSITIONS_X: left, center, right;
-$CSS_POSITIONS_Y: top, middle, bottom;
-$CSS_POSITIONS: list.join($CSS_POSITIONS_X, $CSS_POSITIONS_Y, $separator: comma);
+$css-positions-x: left, center, right;
+$css-positions-y: top, middle, bottom;
+$css-positions: list.join($css-positions-x, $css-positions-y, $separator: comma);
 
 // This map is used to declare constants
 $constants: (
-  CSS_POSITIONS_X: $CSS_POSITIONS_X,
-  CSS_POSITIONS_Y: $CSS_POSITIONS_Y,
-  CSS_POSITIONS: $CSS_POSITIONS,
+  css-positions-x: $css-positions-x,
+  css-positions-y: $css-positions-y,
+  css-positions: $css-positions,
 );
 
 // This function is used to use constants in the project

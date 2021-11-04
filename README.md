@@ -59,7 +59,7 @@ You can also import each subcategory in helpers if you just want to use a specif
 
 This folder contains all information about colors used in the project. Colors are defined in `helpers/colors/_colors.scss`.
 
-Use the map `$colorDefs` to define the color codes and then use these colors in `$colors` in combination with the color name you will use to reference that color in other files.
+Use the map `$color-defs` to define the color codes and then use these colors in `$colors` in combination with the color name you will use to reference that color in other files.
 
 To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
@@ -80,7 +80,7 @@ The example above refers to the variable `text.main` defined in the `$colors` ma
 ```scss
 $colors: (
   text: (
-    main: colorDefs(black),
+    main: color-defs(black),
   ),
 );
 ```
@@ -183,11 +183,11 @@ Constants are located in `helpers/variables/_constants.scss` and includes variab
 
 Constants are defined in the _scss_ map `$contants` and used using the exposed function `const()`. This function can fetch values from a deep nested scss map.
 
-These constants could be useful when positioning a modular component for intance. The example below uses the constant `CSS_POSITIONS_X` to add modifiers for text alignment.
+These constants could be useful when positioning a modular component for intance. The example below uses the constant `css-positions-x` to add modifiers for text alignment.
 
 ```scss
 .foo {
-  @each $value in const(CSS_POSITIONS_X) {
+  @each $value in const(css-positions-x) {
     &--align-#{$value} {
       text-align: $value;
     }
@@ -195,13 +195,13 @@ These constants could be useful when positioning a modular component for intance
 }
 ```
 
-The example above refers to the variable `CSS_POSITIONS_X` defined in the `$contants` map:
+The example above refers to the variable `css-positions-x` defined in the `$contants` map:
 
 ```scss
-$CSS_POSITIONS_X: left, center, right; // This variable is not exposed using @forward
+$css-positions-x: left, center, right; // This variable is not exposed using @forward
 
 $contants: (
-  CSS_POSITIONS_X: $CSS_POSITIONS_X,
+  css-positions-x: $css-positions-x,
 );
 ```
 

@@ -8,10 +8,10 @@
   @include font-medium(); // Set font using font mixins
   padding: size(2); // Set spacing or size using size()
   color: color(brand, primary, text); // Set color using color()
-  line-height: var(font, lineHeight, main); // Set variables using var()
+  line-height: var(font, lineheight, main); // Set variables using var()
 
   // Use const() to loop position modifiers
-  @each $value in const(CSS_POSITIONS_X) {
+  @each $value in const(css-positions-x) {
     &--align-#{$value} {
       text-align: $value;
     }

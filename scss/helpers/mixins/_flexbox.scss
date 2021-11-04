@@ -19,7 +19,7 @@
   order: $order;
 }
 
-@mixin --flex-direction-prefixes($direction) {
+@mixin --direction-prefixes($direction) {
   @if $direction == row {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
@@ -39,7 +39,7 @@
 }
 
 @mixin flex-direction($direction: row) {
-  @include --flex-direction-prefixes($direction);
+  @include --direction-prefixes($direction);
   -ms-flex-direction: $direction;
   flex-direction: $direction;
 }
@@ -80,7 +80,7 @@
   flex-basis: $width;
 }
 
-@mixin --flex-align-self-prefixes($align) {
+@mixin --align-self-prefixes($align) {
   @if $align == flex-start {
     -ms-flex-item-align: start;
   } @else if $align == flex-end {
@@ -91,11 +91,11 @@
 }
 
 @mixin align-self($align: stretch) {
-  @include --flex-align-self-prefixes($align);
+  @include --align-self-prefixes($align);
   align-self: $align;
 }
 
-@mixin --flex-align-items-prefixes($align) {
+@mixin --align-items-prefixes($align) {
   @if $align == flex-start {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -109,7 +109,7 @@
 }
 
 @mixin align-items($align: stretch) {
-  @include --flex-align-items-prefixes($align);
+  @include --align-items-prefixes($align);
   align-items: $align;
 }
 
