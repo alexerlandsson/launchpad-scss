@@ -43,5 +43,11 @@ $variables: (
 
 // This function is used to use variables in the project
 @function var($keys...) {
-  @return map.get($variables, $keys...);
+  $value: map.get($variables, $keys...);
+
+  @if not $value {
+    @error('Variable "#{$keys}" does not exist in $variables.');
+  }
+
+  @return $value;
 }

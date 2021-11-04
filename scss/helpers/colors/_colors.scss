@@ -30,7 +30,13 @@ $color-defs: (
 
 // Function used to get colors from $color-defs in $colors
 @function color-defs($keys...) {
-  @return map.get($color-defs, $keys...);
+  $value: map.get($color-defs, $keys...);
+
+  @if not $value {
+    @error('Color "#{$keys}" does not exist in $color-defs.');
+  }
+
+  @return $value;
 }
 
 // Color Map
@@ -79,5 +85,11 @@ $colors: (
 
 // This function is used to use colors in the project
 @function color($keys...) {
-  @return map.get($colors, $keys...);
+  $value: map.get($colors, $keys...);
+
+  @if not $value {
+    @error('Color "#{$keys}" does not exist in $colors.');
+  }
+
+  @return $value;
 }
