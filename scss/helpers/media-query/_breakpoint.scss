@@ -1,6 +1,7 @@
 /// Declaration of the breakpoints used in the project.
 /// Breakpoint values are set in helpers/variables/_variables.scss.
 
+@use 'sass:meta';
 @use 'sass:map';
 
 // Definition of breakpoints. "Less than (lt)" breakpoints will be
@@ -23,7 +24,7 @@ $breakpoints: ();
 // Mixin used to create the breakpoint media queries
 @mixin breakpoint($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map.get($breakpoints, $breakpoint))} {
+    @media #{meta.inspect(map.get($breakpoints, $breakpoint))} {
       @content;
     }
   } @else {
