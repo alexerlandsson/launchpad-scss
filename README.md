@@ -133,8 +133,6 @@ This folder contains all information about media queries used in the project.
 
 Breakpoints are defined in `helpers/media-query/_breakpoint.scss`. This is the place where you can add or remove breakpoints.
 
-> __Important:__ The mixins in this folder are used in `styles.scss` and should __not__ be used anywhere else. Read more about why in the _imports_ section.
-
 ### mixins
 
 This folder contains all global mixins used in the project. Mixins are primarily used to add prefix to properties, but there can also be other use cases.
@@ -215,7 +213,7 @@ Each component should include a _scss_ file for each breakpoint it uses. These b
 
 As an example, `demo.scss` is the default _scss_ file for that component. This file contains styling across all breakpoints. This file is imported in `imports/imports.scss`. The breakpoint specific file in the same component, `demo-sm.scss`, contains styling used in the `sm` breakpoint (and larger) and is imported in `imports/imports-sm.scss`.
 
-To summarize, breakpoint media quieries may __not__ be included in any components, but be handled in `imports` instead.
+To summarize, breakpoint media quieries should __not__ be included in any components, but be handled in `imports` instead.
 
 ## materials
 

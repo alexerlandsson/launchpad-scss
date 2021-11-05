@@ -10,12 +10,12 @@
 
 // Include breakpoint specific styling
 @each $breakpoint in map.keys(mediaquery.$breakpoints) {
-  @include mediaquery.breakpoint(#{$breakpoint}) {
+  @media #{meta.inspect(map.get(mediaquery.$breakpoints, $breakpoint))} {
     @include meta.load-css('imports/imports-#{$breakpoint}');
   }
 }
 
 // Include print styling
-@include mediaquery.print {
+@media print {
   @include meta.load-css('partials/print/print');
 }

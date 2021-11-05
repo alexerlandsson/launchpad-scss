@@ -1,5 +1,5 @@
 /// Declaration of the breakpoints used in the project.
-/// Breakpoint values are set in helpers/variables/_variables.scss.
+/// Breakpoint imports are set in styles.scss.
 
 @use 'sass:meta';
 @use 'sass:map';
@@ -22,16 +22,5 @@ $breakpoints: ();
     $breakpoints: map.merge($breakpoints, ('#{$breakpoint}': (min-width: map.get($breakpoint-defs, $breakpoint))));
   }
 } @else {
-  @warn 'Map $breakpoint-defs does not exists. No breakpoint media queries will be created.';
-}
-
-// Mixin used to create the breakpoint media queries
-@mixin breakpoint($breakpoint) {
-  @if map.has-key($breakpoints, $breakpoint) {
-    @media #{meta.inspect(map.get($breakpoints, $breakpoint))} {
-      @content;
-    }
-  } @else {
-    @warn 'No value could be retrieved from "#{$breakpoint}". Available breakpoints are: #{map.keys($breakpoints)}.';
-  }
+  @warn 'Map $breakpoint-defs does not exist. No breakpoint media queries will be created.';
 }

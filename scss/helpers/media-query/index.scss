@@ -2,5 +2,4 @@
 /// import this file using:
 /// @use '[path_to_helpers]/helpers/media-query' as *;
 
-@forward 'breakpoint' show breakpoint, $breakpoints;
-@forward 'print';
+@forward 'breakpoint' show $breakpoints;
