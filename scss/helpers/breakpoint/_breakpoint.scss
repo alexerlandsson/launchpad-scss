@@ -4,8 +4,8 @@
 @use 'sass:meta';
 @use 'sass:map';
 
-// Definition of breakpoints. "Less than (lt)" breakpoints will be
-// created in $breakpoints based on these values
+// Definition of breakpoints. "Less than (lt-)" breakpoints will also
+// be created in $breakpoints based on these values.
 $breakpoint-defs: (
   sm: 600px,
   md: 900px,
