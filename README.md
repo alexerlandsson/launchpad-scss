@@ -55,6 +55,12 @@ To use helpers in your components, import them using _scss_ `@use` rule.
 
 You can also import each subcategory in helpers if you just want to use a specific part. It is also possible to add a custom namespace by raplacing `*` with desired namespace.
 
+#### breakpoint
+
+This folder contains all information about breakpoints used in the project. Breakpoints are defined in `helpers/breakpoint/_breakpoint.scss`.
+
+To customize breakpoints, add the breakpoints needed in `$breakpoint-defs`. This _scss_ map will automatically create `min-width` and `max-width` breakpoints based on its values. As an example, if you add a breakpoint called `sm`, two breakpoints will be generated; `sm` and `lt-sm`.
+
 #### colors
 
 This folder contains all information about colors used in the project. Colors are defined in `helpers/colors/_colors.scss`.
@@ -115,7 +121,7 @@ To use these functions in other files, use the functions exposed and imported us
 @use '../../../helpers/functions' as *;
 ```
 
-##### Size
+##### size
 
 Size is a useful function used to create spacing in the project. This function is found in `helpers/functions/_size.scss` and should be used everywhere where a value is set in `px`.
 
@@ -126,12 +132,6 @@ The size is calculated using a multiplier and base unit. The base unit is set to
   padding: size(4); // 4 * 8px = 32px
 }
 ```
-
-### media-query
-
-This folder contains all information about media queries used in the project.
-
-Breakpoints are defined in `helpers/media-query/_breakpoint.scss`. This is the place where you can add or remove breakpoints.
 
 ### mixins
 

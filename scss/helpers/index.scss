@@ -2,9 +2,9 @@
 /// them at the same time by importing this file using:
 /// @use '[path_to_helpers]/helpers' as *;
 
-@forward 'functions';
+@forward 'breakpoint';
 @forward 'colors';
 @forward 'font';
+@forward 'functions';
 @forward 'mixins';
 @forward 'variables';
-@forward 'media-query';
