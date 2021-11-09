@@ -3,8 +3,8 @@
 /// @use '[path_to_helpers]/helpers' as *;
 
 @forward 'breakpoint';
-@forward 'colors';
+@forward 'color';
 @forward 'font';
-@forward 'functions';
-@forward 'mixins';
-@forward 'variables';
+@forward 'function';
+@forward 'mixin';
+@forward 'variable';

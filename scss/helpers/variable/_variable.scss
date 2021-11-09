@@ -3,7 +3,7 @@
 /// a variable using the var() function.
 
 @use 'sass:map';
-@use '../functions' as *;
+@use '../function' as *;
 
 $container-max-width: 650px;
 $container-gutter: size(3);
