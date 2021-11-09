@@ -61,16 +61,16 @@ This folder contains all information about breakpoints used in the project. Brea
 
 To customize breakpoints, add the breakpoints needed in `$breakpoint-defs`. This _scss_ map will automatically create `min-width` and `max-width` breakpoints based on its values. As an example, if you add a breakpoint called `sm`, two breakpoints will be generated; `sm` and `lt-sm`.
 
-#### colors
+#### color
 
-This folder contains all information about colors used in the project. Colors are defined in `helpers/colors/_colors.scss`.
+This folder contains all information about colors used in the project. Colors are defined in `helpers/color/_color.scss`.
 
 Use the map `$color-defs` to define the color codes and then use these colors in `$colors` in combination with the color name you will use to reference that color in other files.
 
 To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/colors' as *;
+@use '../../../helpers/color' as *;
 ```
 
 When __colors__ is imported, set the color using the `color()` function. This function can fetch values from a deep nested _scss_ map.
@@ -111,14 +111,14 @@ When __font__ is imported, set the font using any of the font mixins.
 }
 ```
 
-#### functions
+#### function
 
 This folder contains global functions used across the project.
 
 To use these functions in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/functions' as *;
+@use '../../../helpers/function' as *;
 ```
 
 ##### size
@@ -133,29 +133,29 @@ The size is calculated using a multiplier and base unit. The base unit is set to
 }
 ```
 
-### mixins
+### mixin
 
 This folder contains all global mixins used in the project. Mixins are primarily used to add prefix to properties, but there can also be other use cases.
 
 To use these mixins in other files, use the mixins exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/mixins' as *;
+@use '../../../helpers/mixin' as *;
 ```
 
-### variables
+### variable
 
 This folder contains all global variables used in the project.
 
 To use variables in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/variables' as *;
+@use '../../../helpers/variable' as *;
 ```
 
-#### variables
+#### variable
 
-Global variables are defined in the map `$variables` found in `helpers/variables/_variables.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
+Global variables are defined in the map `$variables` found in `helpers/variable/_variable.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
 
 ```scss
 .foo {
@@ -175,9 +175,9 @@ $variables: (
 );
 ```
 
-#### constans
+#### constant
 
-Constants are located in `helpers/variables/_constants.scss` and includes variables that are bound to _CSS_ itself.
+Constants are located in `helpers/variable/_constant.scss` and includes variables that are bound to _CSS_ itself.
 
 Constants are defined in the _scss_ map `$contants` and used using the exposed function `const()`. This function can fetch values from a deep nested scss map.
 
