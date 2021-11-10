@@ -9,21 +9,26 @@
 
 // This map is used to define all colors used in this project
 $color-defs: (
-  black: #141414,
+  black: #000,
   white: #fff,
   gray: #bfbfbf,
-  graylight: #f0f0f0,
-  graydark: #8a8a8e,
-  brand: (
-    blue: #284e80,
-    bluelight: #dde5ed,
-    gray: #f0f0f0,
-  ),
+  gray-light: #f0f0f0,
+  gray-dark: #757575,
+  blue: #35455d,
+  teal: #92b1b6,
   ui: (
-    green: #347657,
-    greenlight: #c5d5d0,
-    red: #db7058,
-    redlight: #edd8d3,
+    green: #5cb660,
+    green-light: #edf7ed,
+    green-dark: #1e4620,
+    red: #f27472,
+    red-light: #fdeded,
+    red-dark: #5f2120,
+    yellow: #ffa117,
+    yellow-light: #fff4e5,
+    yellow-dark: #663c00,
+    blue: #34baf6,
+    blue-light: #e5f6fd,
+    blue-dark: #014361,
   ),
 );
 
@@ -42,43 +47,53 @@ $color-defs: (
 
 // This map is used to declare variables to use for colors
 $colors: (
-  brand: (
-    primary: (
-      main: color-defs(brand, blue),
-      text: color-defs(white),
-    ),
-    secondary: (
-      main: color-defs(brand, bluelight),
-      text: color-defs(brand, blue),
-    ),
+  primary: (
+    main: color-defs(blue),
+    text: color-defs(white),
+  ),
+  secondary: (
+    main: color-defs(teal),
+    text: color-defs(black),
   ),
   bg: (
     main: color-defs(white),
-    alt: color-defs(graylight),
+    alt: color-defs(gray-light),
   ),
   text: (
     main: color-defs(black),
-    alt: color-defs(graydark),
+    alt: color-defs(gray-dark),
   ),
   link: (
-    main: color-defs(brand, blue),
+    main: color-defs(blue),
   ),
   border: (
     main: color-defs(gray),
   ),
+  disabled: (
+    bg: color-defs(gray-light),
+    text: color-defs(gray-dark),
+  ),
   ui: (
     success: (
-      main: color-defs(ui, greenlight),
-      text: color-defs(ui, green),
+      main: color-defs(ui, green),
+      alt: color-defs(ui, green-light),
+      text: color-defs(ui, green-dark),
     ),
     error: (
-      main: color-defs(ui, redlight),
-      text: color-defs(ui, red),
+      main: color-defs(ui, red),
+      alt: color-defs(ui, red-light),
+      text: color-defs(ui, red-dark),
     ),
-  ),
-  disabled: (
-    bg: color-defs(graylight),
-    text: color-defs(graydark),
+    warning: (
+      main: color-defs(ui, yellow),
+      alt: color-defs(ui, yellow-light),
+      text: color-defs(ui, yellow-dark),
+    ),
+    info: (
+      main: color-defs(ui, blue),
+      alt: color-defs(ui, blue-light),
+      text: color-defs(ui, blue-dark),
+    ),
   ),
 );
 

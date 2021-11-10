@@ -11,14 +11,14 @@ $container-gutter: size(3);
 // This map is used to declare variables
 $variables: (
   size: (
-    inputheight: 50px,
+    input-height: 50px,
     container: (
-      maxwidth: $container-max-width + $container-gutter * 2,
+      max-width: $container-max-width + $container-gutter * 2,
       gutter: $container-gutter,
     ),
   ),
   font: (
-    lineheight: (
+    line-height: (
       main: 1.5,
       alt: 1.2,
     ),
@@ -37,7 +37,7 @@ $variables: (
       slow: 300ms,
       xslow: 400ms,
     ),
-    cubicbezier: cubic-bezier(0.47, 1.64, 0.41, 0.8),
+    cubic-bezier: cubic-bezier(0.47, 1.64, 0.41, 0.8),
   ),
 );
 
