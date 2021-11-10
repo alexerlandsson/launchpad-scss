@@ -1,49 +1,9 @@
 /// All colors used across the projects should be declared in this file.
-/// Declare the color codes in $color-defs and assign them to abstract
-/// variable names in $colors which are the colors used in the project.
-/// The colors are then fetched using the color() function.
+/// Use colors declared in $color-defs in _definitions.scss and give them
+/// an abstract name in $colors. The colors are then fetched using the color() function.
 
 @use 'sass:map';
-
-// Color Definition
-
-// This map is used to define all colors used in this project
-$color-defs: (
-  black: #000,
-  white: #fff,
-  gray: #bfbfbf,
-  gray-light: #f0f0f0,
-  gray-dark: #757575,
-  blue: #35455d,
-  teal: #92b1b6,
-  ui: (
-    green: #5cb660,
-    green-light: #edf7ed,
-    green-dark: #1e4620,
-    red: #f27472,
-    red-light: #fdeded,
-    red-dark: #5f2120,
-    yellow: #ffa117,
-    yellow-light: #fff4e5,
-    yellow-dark: #663c00,
-    blue: #34baf6,
-    blue-light: #e5f6fd,
-    blue-dark: #014361,
-  ),
-);
-
-// Function used to get colors from $color-defs in $colors
-@function color-defs($keys...) {
-  $value: map.get($color-defs, $keys...);
-
-  @if not $value {
-    @error('Color "#{$keys}" does not exist in $color-defs.');
-  }
-
-  @return $value;
-}
-
-// Color Map
+@use '_definitions' as *;
 
 // This map is used to declare variables to use for colors
 $colors: (

@@ -2,13 +2,13 @@
 /// import this file using:
 /// @use '[path_to_helpers]/helpers/mixins' as *;
 
-@forward 'animation';
-@forward 'columns';
-@forward 'flexbox' hide --direction-prefixes, --justify-content-prefixes, --align-self-prefixes, --align-items-prefixes;
-@forward 'grid';
-@forward 'keyframes';
-@forward 'mask';
-@forward 'overflow';
-@forward 'transform';
-@forward 'user-select';
-@forward 'placeholder';
+@forward '_animation';
+@forward '_columns';
+@forward '_flexbox' hide --direction-prefixes, --justify-content-prefixes, --align-self-prefixes, --align-items-prefixes;
+@forward '_grid';
+@forward '_keyframes';
+@forward '_mask';
+@forward '_overflow';
+@forward '_transform';
+@forward '_user-select';
+@forward '_placeholder';

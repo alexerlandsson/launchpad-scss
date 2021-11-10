@@ -57,15 +57,13 @@ You can also import each subcategory in helpers if you just want to use a specif
 
 #### breakpoint
 
-This folder contains all information about breakpoints used in the project. Breakpoints are defined in `helpers/breakpoint/_breakpoint.scss`.
+This folder contains all information about breakpoints used in the project. Breakpoints are defined in `helpers/breakpoint/_breakpoints.scss`.
 
 To customize breakpoints, add the breakpoints needed in `$breakpoint-defs`. This _scss_ map will automatically create `min-width` and `max-width` breakpoints based on its values. As an example, if you add a breakpoint called `sm`, two breakpoints will be generated; `sm` and `lt-sm`.
 
 #### color
 
-This folder contains all information about colors used in the project. Colors are defined in `helpers/color/_color.scss`.
-
-Use the map `$color-defs` to define the color codes and then use these colors in `$colors` in combination with the color name you will use to reference that color in other files.
+This folder contains all information about colors used in the project. Colors are defined in `$color-defs` (`helpers/color/_definition.scss`) and assigned to a variable in `$colors` (`helpers/color/_colors.scss`).
 
 To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
 
@@ -93,7 +91,7 @@ $colors: (
 
 #### font
 
-This folder contains all styling related to the font(s) used in the project. `helpers/font/_font.scss` includes mixins to define a specific font style.
+This folder contains all styling related to the font(s) used in the project. `helpers/font/_fonts.scss` includes mixins to define a specific font style.
 
 If you are going to add own fonts using `@font-face`, this is the place where that code should be placed.
 
@@ -123,7 +121,7 @@ To use these functions in other files, use the functions exposed and imported us
 
 ##### size
 
-Size is a useful function used to create spacing in the project. This function is found in `helpers/functions/_size.scss` and should be used everywhere where a value is set in `px`.
+Size is a useful function used to create spacing in the project. This function is found in `helpers/function/_size.scss` and should be used everywhere where a value is set in `px`.
 
 The size is calculated using a multiplier and base unit. The base unit is set to `8px` by default but could be changed in this file.
 
@@ -153,9 +151,9 @@ To use variables in other files, use the functions exposed and imported using th
 @use '../../../helpers/variable' as *;
 ```
 
-#### variable
+#### variables
 
-Global variables are defined in the map `$variables` found in `helpers/variable/_variable.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
+Global variables are defined in the map `$variables` found in `helpers/variable/_variables.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
 
 ```scss
 .foo {
@@ -175,9 +173,9 @@ $variables: (
 );
 ```
 
-#### constant
+#### constants
 
-Constants are located in `helpers/variable/_constant.scss` and includes variables that are bound to _CSS_ itself.
+Constants are located in `helpers/variable/_constants.scss` and includes variables that are bound to _CSS_ itself.
 
 Constants are defined in the _scss_ map `$contants` and used using the exposed function `const()`. This function can fetch values from a deep nested scss map.
 

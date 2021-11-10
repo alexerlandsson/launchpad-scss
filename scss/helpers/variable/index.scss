@@ -2,5 +2,5 @@
 /// import this file using:
 /// @use '[path_to_helpers]/helpers/variables' as *;
 
-@forward 'constant' show const;
-@forward 'variable' show var;
+@forward '_constants' show const;
+@forward '_variables' show var;
