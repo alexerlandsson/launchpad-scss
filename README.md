@@ -105,7 +105,7 @@ When __font__ is imported, set the font using any of the font mixins.
 
 ```scss
 .foo {
-  @include font-regular();
+  @include font-regular;
 }
 ```
 
