@@ -9,8 +9,8 @@
 @include meta.load-css('imports/imports');
 
 // Include breakpoint specific styling
-@each $breakpoint in map.keys(breakpoint.$breakpoints) {
-  @media #{meta.inspect(map.get(breakpoint.$breakpoints, $breakpoint))} {
+@each $breakpoint, $media-query in breakpoint.$breakpoints {
+  @media #{meta.inspect($media-query)} {
     @include meta.load-css('imports/imports-#{$breakpoint}');
   }
 }

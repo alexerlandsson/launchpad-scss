@@ -17,9 +17,9 @@ $breakpoints: ();
 
 // Assign breakpoint media queries to $breakpoints from $breakpoint-defs
 @if meta.variable-exists('breakpoint-defs') {
-  @each $breakpoint in map.keys($breakpoint-defs) {
-    $breakpoints: map.merge($breakpoints, ('lt-#{$breakpoint}': (max-width: map.get($breakpoint-defs, $breakpoint) - 1)));
-    $breakpoints: map.merge($breakpoints, ('#{$breakpoint}': (min-width: map.get($breakpoint-defs, $breakpoint))));
+  @each $name, $size in $breakpoint-defs {
+    $breakpoints: map.merge($breakpoints, ('lt-#{$name}': (max-width: $size - 1)));
+    $breakpoints: map.merge($breakpoints, ('#{$name}': (min-width: $size)));
   }
 } @else {
   @warn 'Map $breakpoint-defs does not exist. No breakpoint media queries will be created.';
