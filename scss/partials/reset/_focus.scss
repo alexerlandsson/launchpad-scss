@@ -1,0 +1,24 @@
+/// Reset default focus on focusable elements and set custom focus styling
+
+@use '../../helpers' as *;
+
+// Remove inner focus on buttons in Firefox
+::-moz-focus-inner {
+  border: none;
+}
+
+// Remove default focus outline
+:focus {
+  outline: none;
+}
+
+// Add custom default focus to focusable elements
+a,
+button,
+input,
+select,
+textarea {
+  @include focus {
+    outline: 2px solid color(focus, main);
+  }
+}

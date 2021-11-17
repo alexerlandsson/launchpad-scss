@@ -11,6 +11,8 @@ body {
 }
 
 // Print URL to links
-a[href]:after {
-  content: " (" attr(href) ")";
+a[href] {
+  &::after {
+    content: " (" attr(href) ")";
+  }
 }

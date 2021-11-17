@@ -8,7 +8,7 @@
 // This map is used to declare variables to use for colors
 $colors: (
   primary: (
-    main: color-defs(blue),
+    main: color-defs(blue-dark),
     text: color-defs(white),
   ),
   secondary: (
@@ -28,6 +28,9 @@ $colors: (
   ),
   border: (
     main: color-defs(gray),
+  ),
+  focus: (
+    main: color-defs(blue),
   ),
   disabled: (
     bg: color-defs(gray-light),

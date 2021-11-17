@@ -3,9 +3,9 @@
 @use '../../helpers' as *;
 
 button {
-  @include flex-display();
+  @include flex-display;
   @include align-items(center);
-  @include font-regular();
+  @include font-regular;
   padding: 0;
   margin: 0;
   background-color: transparent;

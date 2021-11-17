@@ -1,0 +1,16 @@
+/// Mixins used to add focus to elements
+
+@mixin focus {
+  @supports selector(:focus-visible) {
+    &:focus-visible {
+      @content;
+    }
+  }
+
+  // Safari & IE11
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @content;
+    }
+  }
+}
