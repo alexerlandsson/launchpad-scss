@@ -2,13 +2,13 @@
 
 @use '../../helpers/mixin' as *;
 
-@include keyframes(noTransform) {
+@include keyframes(no-transform) {
   100% {
-    transform: none;
+    @include transform(none);
   }
 }
 
-@include keyframes(fadeIn) {
+@include keyframes(fade-in) {
   0% {
     opacity: 0;
   }
