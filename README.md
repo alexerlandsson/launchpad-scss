@@ -252,7 +252,7 @@ npm run sass
 _If you want sass to watch for changes, run the following command instead._
 
 ```bash
-npm run sass-watch
+npm run sass:watch
 ```
 
 The scripts will output a _CSS_ file at `compiled/styles.css`.

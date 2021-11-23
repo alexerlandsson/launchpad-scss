@@ -1,12 +1,11 @@
 {
   "name": "scss-boilerplate",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Boilerplate for Sass (scss).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass ./scss/styles.scss ./compiled/styles.css",
-    "sass-watch": "sass --watch ./scss/styles.scss ./compiled/styles.css"
+    "sass:watch": "sass --watch ./scss/styles.scss ./compiled/styles.css"
   },
   "repository": {
     "type": "git",
