@@ -10,3 +10,8 @@
   font-family: sans-serif;
   font-weight: 500;
 }
+
+@mixin font-bold {
+  font-family: sans-serif;
+  font-weight: 700;
+}

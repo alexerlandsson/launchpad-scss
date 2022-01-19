@@ -1,0 +1,9 @@
+/// Mixin used to add hover when hover is applicable
+
+@mixin hover {
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

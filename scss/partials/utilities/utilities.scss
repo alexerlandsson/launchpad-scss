@@ -6,3 +6,59 @@
 .no-margin {
   margin: 0;
 }
+
+// Spacing utility classes
+// Include this mixin to activate spacing classes
+
+@mixin create-utility-spacing-classes {
+  // Generates classes used to add spacing from properties defined
+  // in $spacing-properties.
+  // Each property can be set on a specific axis; none (all), t (top),
+  // b (bottom), l (left), r (right), x (left and right) and y (top and bottom)
+  // following this class name format: [PROPERTY_ABBR]-[AXIS]--[SIZE].
+
+  // Properties to generate class names for
+  $spacing-properties: (
+    m: margin,
+    p: padding,
+  );
+
+  // Sizes for each property
+  $spacing-sizes: 1, 2, 3, 4, 5;
+
+  // Create spacing utility classes
+  @each $abbr, $property in $spacing-properties {
+    @each $size in $spacing-sizes {
+      .#{$abbr}--#{$size} {
+        #{$property}: size($size);
+      }
+
+      .#{$abbr}-t--#{$size} {
+        #{$property}-top: size($size);
+      }
+
+      .#{$abbr}-b--#{$size} {
+        #{$property}-bottom: size($size);
+      }
+
+      .#{$abbr}-l--#{$size} {
+        #{$property}-left: size($size);
+      }
+
+      .#{$abbr}-r--#{$size} {
+        #{$property}-right: size($size);
+      }
+
+      .#{$abbr}-x--#{$size} {
+        #{$property}-left: size($size);
+        #{$property}-right: size($size);
+      }
+
+      .#{$abbr}-y--#{$size} {
+        #{$property}-top: size($size);
+        #{$property}-bottom: size($size);
+      }
+    }
+  }
+}
+//@include create-utility-spacing-classes;

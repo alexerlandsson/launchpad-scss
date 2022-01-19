@@ -1,0 +1,12 @@
+/// Reset styling on input elements
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea {
+  font-size: 16px; // Disables zoom on focus in iOS
+}

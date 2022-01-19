@@ -1,0 +1,11 @@
+/// Mixin used to add styling to text selection
+
+@mixin selection {
+  ::selection {
+    @content;
+  }
+
+  ::-moz-selection {
+    @content;
+  }
+}

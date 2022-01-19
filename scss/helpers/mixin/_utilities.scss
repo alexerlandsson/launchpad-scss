@@ -1,0 +1,14 @@
+// Utility mixins
+
+// Remove outer vertical margins from first and last direct child
+@mixin remove-direct-child-outer-margins {
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

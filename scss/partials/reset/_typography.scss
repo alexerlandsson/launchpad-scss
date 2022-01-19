@@ -1,0 +1,6 @@
+@use '../../helpers' as *;
+
+b,
+strong {
+  @include font-bold;
+}
