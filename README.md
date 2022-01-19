@@ -153,11 +153,11 @@ To use variables in other files, use the functions exposed and imported using th
 
 #### variables
 
-Global variables are defined in the map `$variables` found in `helpers/variable/_variables.scss`. To use the variables in other files, use the `var()` function. This function can fetch values from a deep nested scss map.
+Global variables are defined in the map `$variables` found in `helpers/variable/_variables.scss`. To use the variables in other files, use the `scss-var()` function. This function can fetch values from a deep nested scss map.
 
 ```scss
 .foo {
-  font-size: var(font, size, large);
+  font-size: scss-var(font, size, large);
 }
 ```
 

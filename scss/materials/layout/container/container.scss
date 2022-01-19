@@ -2,10 +2,10 @@
 
 .container {
   width: 100%;
-  max-width: var(size, container, max-width);
+  max-width: scss-var(size, container, max-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(size, container, gutter);
-  padding-left: max(env(safe-area-inset-left), var(size, container, gutter));
-  padding-right: max(env(safe-area-inset-right), var(size, container, gutter));
+  padding: 0 scss-var(size, container, gutter);
+  padding-left: max(env(safe-area-inset-left), scss-var(size, container, gutter));
+  padding-right: max(env(safe-area-inset-right), scss-var(size, container, gutter));
 }

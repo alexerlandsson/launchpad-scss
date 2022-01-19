@@ -9,7 +9,7 @@
   padding: size(2); // Set spacing or size using size()
   background-color: color(primary, main); // Set color using color()
   color: color(primary, text); // Set color using color()
-  line-height: var(font, line-height, main); // Set variables using var()
+  line-height: scss-var(font, line-height, main); // Set variables using scss-var()
 
   // Use const() to loop position modifiers
   @each $value in const(css-positions-x) {

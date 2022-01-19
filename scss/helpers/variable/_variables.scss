@@ -1,6 +1,6 @@
 /// Variables to use across the project.
 /// Declare variables in the $variables map and fetch
-/// a variable using the var() function.
+/// a variable using the scss-var() function.
 
 @use 'sass:map';
 @use '../function' as *;
@@ -42,7 +42,7 @@ $variables: (
 );
 
 // This function is used to use variables in the project
-@function var($keys...) {
+@function scss-var($keys...) {
   $value: map.get($variables, $keys...);
 
   @if not $value {
