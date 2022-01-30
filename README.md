@@ -14,7 +14,6 @@ The following is an example of how a component could be structured.
 <div class="foo foo--alternative">
   <div class="foo__bar">
     <!-- HTML -->
-    <div></div>
   </div>
 </div>
 ```
