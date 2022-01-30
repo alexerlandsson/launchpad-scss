@@ -1,6 +1,6 @@
 {
   "name": "scss-boilerplate",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "Boilerplate for Sass (scss).",
   "main": "index.js",
   "scripts": {
