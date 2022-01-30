@@ -1,11 +1,12 @@
 {
   "name": "scss-boilerplate",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Boilerplate for Sass (scss).",
   "main": "index.js",
   "scripts": {
     "sass": "sass ./scss/styles.scss ./compiled/styles.css",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint '**/*.scss'"
   },
   "repository": {
     "type": "git",
