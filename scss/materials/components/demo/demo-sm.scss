@@ -4,5 +4,7 @@
 @use "../../../helpers" as *;
 
 .demo {
+  --demo-css-variable: #{size(4)}; // Change size in the CSS custom property
+
   padding: size(4); // Set spacing or size using size()
 }
