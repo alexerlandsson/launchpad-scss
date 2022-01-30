@@ -15,6 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "2.5.1",
-    "sass": "^1.43.3"
+    "sass": "^1.43.3",
+    "stylelint": "^14.3.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
