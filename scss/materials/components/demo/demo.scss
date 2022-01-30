@@ -8,6 +8,7 @@
 
   @include flex-display; // Set prefixes using mixins
   @include font-medium; // Set font using font mixins
+
   padding: size(2); // Set spacing or size using size()
   margin: var(--demo-css-variable); // Use of CSS custom properties
   background-color: color(primary, main); // Set color using color()

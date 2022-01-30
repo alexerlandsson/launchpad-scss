@@ -1,5 +1,7 @@
 /// Mixin used to prefix the keyframes property
 
+/* stylelint-disable at-rule-no-vendor-prefix, keyframes-name-pattern */
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -9,3 +11,5 @@
     @content;
   }
 }
+
+/* stylelint-enable at-rule-no-vendor-prefix, keyframes-name-pattern */

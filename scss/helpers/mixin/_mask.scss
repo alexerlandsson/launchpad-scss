@@ -1,5 +1,7 @@
 /// Mixins used to prefix mask related properties
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin mask-image($url) {
   -webkit-mask-image: $url;
   mask-image: $url;
@@ -24,3 +26,5 @@
   -webkit-mask-repeat: $repeat;
   mask-repeat: $repeat;
 }
+
+/* stylelint-enable property-no-vendor-prefix */

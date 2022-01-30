@@ -1,5 +1,7 @@
 /// Mixins used to prefix grid related properties
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin grid-display($display: grid) {
   display: -ms-#{$display};
   display: #{$display};
@@ -36,3 +38,5 @@
   -ms-grid-column-align: $justify;
   justify-self: $justify;
 }
+
+/* stylelint-enable property-no-vendor-prefix */

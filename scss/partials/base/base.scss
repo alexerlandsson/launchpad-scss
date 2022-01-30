@@ -12,11 +12,13 @@
 
 html {
   font-size: 100%;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
 }
 
 body {
   @include font-regular;
+
   margin: 0;
   background-color: color(bg, main);
   font-size: scss-var(font, size, regular);
