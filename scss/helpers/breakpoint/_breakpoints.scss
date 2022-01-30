@@ -19,15 +19,14 @@ $breakpoints: ();
 @if meta.variable-exists("breakpoint-defs") {
   @each $name, $size in $breakpoint-defs {
     $breakpoints: map.merge(
-      $breakpoints,
-      (
-        "lt-#{$name}": (
-          max-width: $size - 1,
-        ),
-      )
-    );
-    $breakpoints: map.merge(
-      $breakpoints,
+      map.merge(
+        $breakpoints,
+        (
+          "lt-#{$name}": (
+            max-width: $size - 1,
+          ),
+        )
+      ),
       (
         "#{$name}": (
           min-width: $size,
