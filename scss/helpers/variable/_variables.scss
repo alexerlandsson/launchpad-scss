@@ -2,8 +2,8 @@
 /// Declare variables in the $variables map and fetch
 /// a variable using the scss-var() function.
 
-@use 'sass:map';
-@use '../function' as *;
+@use "sass:map";
+@use "../function" as *;
 
 $container-max-width: 650px;
 $container-gutter: size(3);
@@ -46,7 +46,7 @@ $variables: (
   $value: map.get($variables, $keys...);
 
   @if not $value {
-    @error('Variable "#{$keys}" does not exist in $variables.');
+    @error "Variable '#{$keys}' does not exist in $variables.";
   }
 
   @return $value;

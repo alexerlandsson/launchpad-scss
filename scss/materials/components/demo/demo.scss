@@ -1,12 +1,15 @@
 // This is the default component file. All styling in this file are applied across all breakpoints
 
 // Import helpers to use in this component
-@use '../../../helpers' as *;
+@use "../../../helpers" as *;
 
 .demo {
+  --demo-css-variable: #{size(2)}; // Set a CSS custom property
+
   @include flex-display; // Set prefixes using mixins
   @include font-medium; // Set font using font mixins
   padding: size(2); // Set spacing or size using size()
+  margin: var(--demo-css-variable); // Use of CSS custom properties
   background-color: color(primary, main); // Set color using color()
   color: color(primary, text); // Set color using color()
   line-height: scss-var(font, line-height, main); // Set variables using scss-var()

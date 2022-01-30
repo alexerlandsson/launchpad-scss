@@ -1,6 +1,6 @@
 /// Reset default focus on focusable elements and set custom focus styling
 
-@use '../../helpers' as *;
+@use "../../helpers" as *;
 
 // Remove inner focus on buttons in Firefox
 ::-moz-focus-inner {

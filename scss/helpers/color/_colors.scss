@@ -2,8 +2,8 @@
 /// Use colors declared in $color-defs in _definitions.scss and give them
 /// an abstract name in $colors. The colors are then fetched using the color() function.
 
-@use 'sass:map';
-@use '_definitions' as *;
+@use "sass:map";
+@use "_definitions" as *;
 
 // This map is used to declare variables to use for colors
 $colors: (
@@ -65,7 +65,7 @@ $colors: (
   $value: map.get($colors, $keys...);
 
   @if not $value {
-    @error('Color "#{$keys}" does not exist in $colors.');
+    @error "Color '#{$keys}' does not exist in $colors.";
   }
 
   @return $value;

@@ -1,8 +1,10 @@
 // These styles will only apply in breakpoint sm and larger
 
 // Import helpers to use in this component
-@use '../../../helpers' as *;
+@use "../../../helpers" as *;
 
 .demo {
+  --demo-css-variable: #{size(4)}; // Change size in the CSS custom property
+
   padding: size(4); // Set spacing or size using size()
 }

@@ -1,6 +1,6 @@
 /// Reset styling on the button element
 
-@use '../../helpers' as *;
+@use "../../helpers" as *;
 
 button {
   @include flex-display;

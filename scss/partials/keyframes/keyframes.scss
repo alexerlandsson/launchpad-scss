@@ -1,6 +1,6 @@
 /// Global keyframes to use in multiple materials
 
-@use '../../helpers/mixin' as *;
+@use "../../helpers/mixin" as *;
 
 @include keyframes(no-transform) {
   100% {
