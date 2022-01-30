@@ -252,7 +252,7 @@ npm run sass
 
 The scripts will output a _CSS_ file at `compiled/styles.css`.
 
-## Prettier
+## Code formatting
 
 This project uses [Prettier](https://prettier.io/) to format the code. To format all files, run the following command.
 
