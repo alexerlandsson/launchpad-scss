@@ -1,7 +1,7 @@
 // This is the default component file. All styling in this file are applied across all breakpoints
 
 // Import helpers to use in this component
-@use '../../../helpers' as *;
+@use "../../../helpers" as *;
 
 .demo {
   @include flex-display; // Set prefixes using mixins

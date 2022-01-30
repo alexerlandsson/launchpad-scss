@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass ./scss/styles.scss ./compiled/styles.css",
-    "sass:watch": "sass --watch ./scss/styles.scss ./compiled/styles.css"
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "2.5.1",
     "sass": "^1.43.3"
   }
 }

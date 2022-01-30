@@ -6,7 +6,7 @@ It is a well tested architecture that works in projects of any size, from small 
 
 ## Methodology
 
-The design of this boilerplate is based on the _CSS_ mothodology __BEM__.
+The design of this boilerplate is based on the _CSS_ mothodology **BEM**.
 
 The following is an example of how a component could be structured.
 
@@ -14,7 +14,8 @@ The following is an example of how a component could be structured.
 <div class="foo foo--alternative">
   <div class="foo__bar">
     <!-- HTML -->
-  <div>
+    <div></div>
+  </div>
 </div>
 ```
 
@@ -38,10 +39,10 @@ In the example above, `.foo` is the name of the component (_block_). `.foo__bar`
 
 The _scss_ is structured in four main folders with `styles.scss` as a main input file.
 
-* helpers
-* imports
-* materials
-* partials
+- helpers
+- imports
+- materials
+- partials
 
 ### helpers
 
@@ -50,7 +51,7 @@ Helpers are features such as functions, mixins and theme related variables such 
 To use helpers in your components, import them using _scss_ `@use` rule.
 
 ```scss
-@use '../../../helpers' as *;
+@use "../../../helpers" as *;
 ```
 
 You can also import each subcategory in helpers if you just want to use a specific part. It is also possible to add a custom namespace by raplacing `*` with desired namespace.
@@ -65,13 +66,13 @@ To customize breakpoints, add the breakpoints needed in `$breakpoint-defs`. This
 
 This folder contains all information about colors used in the project. Colors are defined in `$color-defs` (`helpers/color/_definition.scss`) and assigned to a variable in `$colors` (`helpers/color/_colors.scss`).
 
-To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use colors in other files, use the function `color()` that are exposed and imported using the `@use` rule. It is imported with everything else from **helpers** but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/color' as *;
+@use "../../../helpers/color" as *;
 ```
 
-When __colors__ is imported, set the color using the `color()` function. This function can fetch values from a deep nested _scss_ map.
+When **colors** is imported, set the color using the `color()` function. This function can fetch values from a deep nested _scss_ map.
 
 ```scss
 .foo {
@@ -95,13 +96,13 @@ This folder contains all styling related to the font(s) used in the project. `he
 
 If you are going to add own fonts using `@font-face`, this is the place where that code should be placed.
 
-To use colors in other files, use the mixins exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use colors in other files, use the mixins exposed and imported using the `@use` rule. It is imported with everything else from **helpers** but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/font' as *;
+@use "../../../helpers/font" as *;
 ```
 
-When __font__ is imported, set the font using any of the font mixins.
+When **font** is imported, set the font using any of the font mixins.
 
 ```scss
 .foo {
@@ -113,10 +114,10 @@ When __font__ is imported, set the font using any of the font mixins.
 
 This folder contains global functions used across the project.
 
-To use these functions in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use these functions in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from **helpers** but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/function' as *;
+@use "../../../helpers/function" as *;
 ```
 
 ##### size
@@ -131,24 +132,24 @@ The size is calculated using a multiplier and base unit. The base unit is set to
 }
 ```
 
-### mixin
+#### mixin
 
 This folder contains all global mixins used in the project. Mixins are primarily used to add prefix to properties, but there can also be other use cases.
 
-To use these mixins in other files, use the mixins exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use these mixins in other files, use the mixins exposed and imported using the `@use` rule. It is imported with everything else from **helpers** but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/mixin' as *;
+@use "../../../helpers/mixin" as *;
 ```
 
-### variable
+#### variable
 
 This folder contains all global variables used in the project.
 
-To use variables in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from __helpers__ but can also be imported alone using the following `@use` rule.
+To use variables in other files, use the functions exposed and imported using the `@use` rule. It is imported with everything else from **helpers** but can also be imported alone using the following `@use` rule.
 
 ```scss
-@use '../../../helpers/variable' as *;
+@use "../../../helpers/variable" as *;
 ```
 
 #### variables
@@ -201,7 +202,7 @@ $contants: (
 );
 ```
 
-## imports
+### imports
 
 Imports are located in `imports` and this is where all components are imported.
 
@@ -211,29 +212,29 @@ Each component should include a _scss_ file for each breakpoint it uses. These b
 
 As an example, `demo.scss` is the default _scss_ file for that component. This file contains styling across all breakpoints. This file is imported in `imports/imports.scss`. The breakpoint specific file in the same component, `demo-sm.scss`, contains styling used in the `sm` breakpoint (and larger) and is imported in `imports/imports-sm.scss`.
 
-To summarize, breakpoint media quieries should __not__ be included in any components, but be handled in `imports` instead.
+To summarize, breakpoint media quieries should **not** be included in any components, but be handled in `imports` instead.
 
-## materials
+### materials
 
 Materials is the building blocks in the project. Each material should be based on the lowest common dominator. A material is modular and could be used by iteself, inside other materials or in combination with other materials.
 
 Materials is split into two parts; _componets_ and _layout_. They are both containing components, but separated to make the structure easier. This is the place where the majority of the work is done.
 
-> __Important:__ It is important to name the components and thier breakpoint folders correctly. The folder and default _scss_ file should both be named as the comopnent itself. Breakpoint specific _scss_ files should be suffixed with `*-[BREAKPOINT]` (`[COMPONENT_NAME]-[BREAKPOINT].scss`). If the components is named `demo` the breakpoint file for the `sm` breakpoint should be named `demo-sm.scss`.
+> **Important:** It is important to name the components and thier breakpoint folders correctly. The folder and default _scss_ file should both be named as the comopnent itself. Breakpoint specific _scss_ files should be suffixed with `*-[BREAKPOINT]` (`[COMPONENT_NAME]-[BREAKPOINT].scss`). If the components is named `demo` the breakpoint file for the `sm` breakpoint should be named `demo-sm.scss`.
 
-### components
+#### components
 
 Components are found in `materials/components`. Each folder in this location component represents a component. Each component consists of one or more _scss_ files (one for each breakpoint).
 
 > A demo component is included in this boilerplate called `demo` to demonstrate how a component is supposed to be built.
 
-### layout
+#### layout
 
 Components that are used for layout purposes only should be placed in `materials/layout`. Other than that, the same rules as for _components_ applies here.
 
 > The layout component `container` is included in this boilerplate as an example of what a layout material is. This is also a very useful component in most projects.
 
-## partials
+### partials
 
 Partials contains styling aimed at elements and global styling, such as base styling, keyframes and reset _CSS_.
 
@@ -249,10 +250,12 @@ npm install
 npm run sass
 ```
 
-_If you want sass to watch for changes, run the following command instead._
+The scripts will output a _CSS_ file at `compiled/styles.css`.
+
+## Prettier
+
+This project uses [Prettier](https://prettier.io/) to format the code. To format all files, run the following command.
 
 ```bash
-npm run sass:watch
+npm run prettier
 ```
-
-The scripts will output a _CSS_ file at `compiled/styles.css`.

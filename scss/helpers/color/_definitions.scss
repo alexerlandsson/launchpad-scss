@@ -2,7 +2,7 @@
 /// variable names in $colors found in _colors.scss which are the colors
 /// used in the project.
 
-@use 'sass:map';
+@use "sass:map";
 
 // This map is used to define all colors used in this project
 $color-defs: (
@@ -35,7 +35,7 @@ $color-defs: (
   $value: map.get($color-defs, $keys...);
 
   @if not $value {
-    @error('Color "#{$keys}" does not exist in $color-defs.');
+    @error ('Color "#{$keys}" does not exist in $color-defs.');
   }
 
   @return $value;

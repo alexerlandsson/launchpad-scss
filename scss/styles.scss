@@ -1,20 +1,20 @@
 /// This is the entry point for the scss. All files in the project
 /// are loaded into this file.
 
-@use 'sass:meta';
-@use 'helpers/breakpoint' as breakpoint;
+@use "sass:meta";
+@use "helpers/breakpoint" as breakpoint;
 
 // Include non-breakpoint specific styling
-@include meta.load-css('imports/imports');
+@include meta.load-css("imports/imports");
 
 // Include breakpoint specific styling
 @each $breakpoint, $media-query in breakpoint.$breakpoints {
   @media #{meta.inspect($media-query)} {
-    @include meta.load-css('imports/imports-#{$breakpoint}');
+    @include meta.load-css("imports/imports-#{$breakpoint}");
   }
 }
 
 // Include print styling
 @media print {
-  @include meta.load-css('partials/print/print');
+  @include meta.load-css("partials/print/print");
 }

@@ -3,7 +3,7 @@
 /// a constant using the const() function.
 
 @use "sass:list";
-@use 'sass:map';
+@use "sass:map";
 
 // Positions
 $css-positions-x: left, center, right;
@@ -22,7 +22,7 @@ $constants: (
   $value: map.get($constants, $keys...);
 
   @if not $value {
-    @error('Constant "#{$keys}" does not exist in $constants.');
+    @error ('Constant "#{$keys}" does not exist in $constants.');
   }
 
   @return $value;
