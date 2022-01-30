@@ -7,6 +7,6 @@
   @if meta.type-of($multiplier) == number {
     @return ($baseUnit * $multiplier);
   } @else {
-    @error 'Size $multiplier has to be a number.';
+    @error "Size '#{$multiplier}' has to be a number.";
   }
 }

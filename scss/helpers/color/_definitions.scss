@@ -35,7 +35,7 @@ $color-defs: (
   $value: map.get($color-defs, $keys...);
 
   @if not $value {
-    @error ('Color "#{$keys}" does not exist in $color-defs.');
+    @error "Color '#{$keys}' does not exist in $color-defs.";
   }
 
   @return $value;

@@ -65,7 +65,7 @@ $colors: (
   $value: map.get($colors, $keys...);
 
   @if not $value {
-    @error ('Color "#{$keys}" does not exist in $colors.');
+    @error "Color '#{$keys}' does not exist in $colors.";
   }
 
   @return $value;

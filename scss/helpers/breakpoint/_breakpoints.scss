@@ -36,5 +36,5 @@ $breakpoints: ();
     );
   }
 } @else {
-  @warn 'Map $breakpoint-defs does not exist. No breakpoint media queries will be created.';
+  @warn "Map '$breakpoint-defs' does not exist. No breakpoint media queries will be created.";
 }

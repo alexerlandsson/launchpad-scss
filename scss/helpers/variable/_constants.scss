@@ -22,7 +22,7 @@ $constants: (
   $value: map.get($constants, $keys...);
 
   @if not $value {
-    @error ('Constant "#{$keys}" does not exist in $constants.');
+    @error "Constant '#{$keys}' does not exist in $constants.";
   }
 
   @return $value;
