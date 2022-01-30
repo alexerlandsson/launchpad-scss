@@ -1,6 +1,10 @@
 /// Mixin used to add smooth touch overflow scroll to webkit browsers
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin overflow-auto {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* stylelint-enable property-no-vendor-prefix */

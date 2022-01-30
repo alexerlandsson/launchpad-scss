@@ -1,5 +1,7 @@
 /// Mixins used to prefix animation related properties
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin animation($value...) {
   -webkit-animation: $value;
   animation: $value;
@@ -44,3 +46,5 @@
   -webkit-animation-timing-function: $timing-function;
   animation-timing-function: $timing-function;
 }
+
+/* stylelint-enable property-no-vendor-prefix */

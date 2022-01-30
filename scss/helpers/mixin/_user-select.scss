@@ -1,8 +1,12 @@
 /// Mixin used to set user-select
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin user-select($value) {
   -webkit-user-select: $value;
   -moz-user-select: $value;
   -ms-user-select: $value;
   user-select: $value;
 }
+
+/* stylelint-enable property-no-vendor-prefix */

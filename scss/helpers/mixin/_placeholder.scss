@@ -1,5 +1,7 @@
 /// Mixin used to add styling to input placeholder
 
+/* stylelint-disable selector-no-vendor-prefix */
+
 @mixin placeholder {
   &::-webkit-input-placeholder {
     @content;
@@ -17,3 +19,5 @@
     @content;
   }
 }
+
+/* stylelint-enable selector-no-vendor-prefix */

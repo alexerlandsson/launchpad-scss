@@ -1,5 +1,7 @@
 /// Mixins used to prefix transform related properties
 
+/* stylelint-disable property-no-vendor-prefix */
+
 @mixin transform($value...) {
   -webkit-transform: $value;
   -ms-transform: $value;
@@ -11,3 +13,5 @@
   -ms-transform-origin: $value;
   transform-origin: $value;
 }
+
+/* stylelint-enable property-no-vendor-prefix */
