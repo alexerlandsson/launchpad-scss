@@ -237,13 +237,17 @@ Components that are used for layout purposes only should be placed in `materials
 
 Partials contains styling aimed at elements and global styling, such as base styling, keyframes and reset _CSS_.
 
-## Compile into CSS
+## Work in this repository
 
-Compile the _scss_ in this project into _CSS_ by running the following commands.
+Before you start working in this repository, install the dependencies.
 
 ```bash
 npm install
 ```
+
+### Compile scss to CSS
+
+Compile the _scss_ in this project into _CSS_ by running the following commands.
 
 ```bash
 npm run sass
@@ -251,10 +255,18 @@ npm run sass
 
 The scripts will output a _CSS_ file at `compiled/styles.css`.
 
-## Code formatting
+### Code formatting
 
 This project uses [Prettier](https://prettier.io/) to format the code. To format all files, run the following command.
 
 ```bash
 npm run prettier
+```
+
+### Lint
+
+This project uses [Stylelint](https://stylelint.io) to lint the _scss_. The settings is based on `stylelint-config-standard-scss`. To run the lint, run the following command.
+
+```bash
+npm run stylelint
 ```
