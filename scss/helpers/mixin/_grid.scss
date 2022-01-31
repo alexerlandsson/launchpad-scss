@@ -29,6 +29,16 @@
   grid-row: $start / span $span;
 }
 
+@mixin grid-auto-columns($track-size: auto) {
+  -ms-grid-columns: $track-size;
+  grid-auto-columns: $track-size;
+}
+
+@mixin grid-auto-rows($track-size: auto) {
+  -ms-grid-rows: $track-size;
+  grid-auto-rows: $track-size;
+}
+
 @mixin grid-align-self($align: auto) {
   -ms-grid-row-align: $align;
   align-self: $align;
