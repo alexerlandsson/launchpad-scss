@@ -6,6 +6,7 @@
       {
         "camelCaseSvgKeywords": true
       }
-    ]
+    ],
+    "alpha-value-notation": "number"
   }
 }
