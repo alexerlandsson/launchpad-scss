@@ -3,6 +3,7 @@
 /// @use '[path_to_helpers]/helpers/mixins' as *;
 
 @forward "_animation";
+@forward "_appearance";
 @forward "_columns";
 @forward "_flexbox" hide flex-direction-prefixes, justify-content-prefixes,
   align-self-prefixes, align-items-prefixes;

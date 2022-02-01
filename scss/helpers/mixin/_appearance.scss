@@ -1,0 +1,11 @@
+/// Mixins used to prefix appearance property
+
+/* stylelint-disable property-no-vendor-prefix */
+
+@mixin appearance($value: auto) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+/* stylelint-enable property-no-vendor-prefix */
