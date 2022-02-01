@@ -1,0 +1,10 @@
+/// Mixins used to prefix appearance property
+
+/* stylelint-disable property-no-vendor-prefix */
+
+@mixin text-size-adjust($value: auto) {
+  -webkit-text-size-adjust: $value;
+  text-size-adjust: $value;
+}
+
+/* stylelint-enable property-no-vendor-prefix */
