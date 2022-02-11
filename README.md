@@ -179,11 +179,11 @@ Constants are located in `helpers/variable/_constants.scss` and includes variabl
 
 Constants are defined in the _scss_ map `$contants` and used using the exposed function `const()`. This function can fetch values from a deep nested scss map.
 
-These constants could be useful when positioning a modular component for intance. The example below uses the constant `css-positions-x` to add modifiers for text alignment.
+These constants could be useful when positioning a modular component for intance. The example below uses the constant `position, inline, x` to add modifiers for text alignment.
 
 ```scss
 .foo {
-  @each $value in const(css-positions-x) {
+  @each $value in const(position, inline, x) {
     &--align-#{$value} {
       text-align: $value;
     }
@@ -191,13 +191,17 @@ These constants could be useful when positioning a modular component for intance
 }
 ```
 
-The example above refers to the variable `css-positions-x` defined in the `$contants` map:
+The example above refers to the variable `$_position-inline-x` used in the `$contants` map:
 
 ```scss
-$css-positions-x: left, center, right; // This variable is not exposed using @forward
+$_position-inline-x: left, center, right; // This variable is not exposed using @forward
 
 $contants: (
-  css-positions-x: $css-positions-x,
+  position: (
+    inline: (
+      x: $_position-inline-x,
+    ),
+  ),
 );
 ```
 
