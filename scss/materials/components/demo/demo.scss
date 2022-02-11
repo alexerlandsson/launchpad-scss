@@ -16,7 +16,7 @@
   line-height: scss-var(font, line-height, main); // Set variables using scss-var()
 
   // Use const() to loop position modifiers
-  @each $value in const(css-positions-x) {
+  @each $value in const(position, inline, x) {
     &--align-#{$value} {
       text-align: $value;
     }
