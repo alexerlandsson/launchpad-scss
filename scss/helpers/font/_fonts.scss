@@ -1,17 +1,19 @@
 /// This file contains font settings and exposes
 /// the fonts using mixins.
 
+@use "../variable" as *;
+
 @mixin font-regular {
-  font-family: sans-serif;
+  font-family: scss-var(font, family, main);
   font-weight: 400;
 }
 
 @mixin font-medium {
-  font-family: sans-serif;
+  font-family: scss-var(font, family, main);
   font-weight: 500;
 }
 
 @mixin font-bold {
-  font-family: sans-serif;
+  font-family: scss-var(font, family, main);
   font-weight: 700;
 }
