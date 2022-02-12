@@ -2,11 +2,7 @@
 
 @use "../../helpers" as *;
 
-button {
-  @include flex-display;
-  @include align-items(center);
-  @include font-regular;
-
+:where(button) {
   padding: 0;
   margin: 0;
   background-color: transparent;

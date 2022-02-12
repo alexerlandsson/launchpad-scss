@@ -1,6 +1,5 @@
 @use "../../helpers" as *;
 
-b,
-strong {
+:where(b, strong) {
   @include font-bold;
 }

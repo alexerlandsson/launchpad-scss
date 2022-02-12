@@ -1,5 +1,5 @@
 /// Reset styling on the iframe element
 
-iframe {
+:where(iframe) {
   border: none;
 }
