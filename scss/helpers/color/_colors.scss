@@ -36,6 +36,10 @@ $colors: (
     bg: color-defs(gray-light),
     text: color-defs(gray-dark),
   ),
+  overlay: (
+    main: color-defs(black),
+    alt: color-defs(white),
+  ),
   semantic: (
     success: (
       main: color-defs(semantic, green),
