@@ -36,26 +36,26 @@ $colors: (
     bg: color-defs(gray-light),
     text: color-defs(gray-dark),
   ),
-  ui: (
+  semantic: (
     success: (
-      main: color-defs(ui, green),
-      alt: color-defs(ui, green-light),
-      text: color-defs(ui, green-dark),
+      main: color-defs(semantic, green),
+      alt: color-defs(semantic, green-light),
+      text: color-defs(semantic, green-dark),
     ),
     error: (
-      main: color-defs(ui, red),
-      alt: color-defs(ui, red-light),
-      text: color-defs(ui, red-dark),
+      main: color-defs(semantic, red),
+      alt: color-defs(semantic, red-light),
+      text: color-defs(semantic, red-dark),
     ),
     warning: (
-      main: color-defs(ui, yellow),
-      alt: color-defs(ui, yellow-light),
-      text: color-defs(ui, yellow-dark),
+      main: color-defs(semantic, yellow),
+      alt: color-defs(semantic, yellow-light),
+      text: color-defs(semantic, yellow-dark),
     ),
     info: (
-      main: color-defs(ui, blue),
-      alt: color-defs(ui, blue-light),
-      text: color-defs(ui, blue-dark),
+      main: color-defs(semantic, blue),
+      alt: color-defs(semantic, blue-light),
+      text: color-defs(semantic, blue-dark),
     ),
   ),
 );
