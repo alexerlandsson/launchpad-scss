@@ -3,6 +3,7 @@
 /// a variable using the scss-var() function.
 
 @use "sass:map";
+@use "sass:math";
 @use "../function" as *;
 
 $container-max-width: 650px;
@@ -18,16 +19,53 @@ $variables: (
     ),
   ),
   font: (
+    family: (
+      main: sans-serif,
+      monospace: monospace,
+    ),
+    weight: (
+      thin: 100,
+      ultra-light: 200,
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semi-bold: 600,
+      bold: 700,
+      ultra-bold: 800,
+      black: 900,
+    ),
     line-height: (
       main: 1.5,
       alt: 1.2,
     ),
+    letter-spacing: (
+      main: 0.05em,
+      negative: -0.05em,
+    ),
     size: (
+      xxsmall: 0.625rem,
       xsmall: 0.75rem,
       small: 0.875rem,
       regular: 1rem,
       large: 1.125rem,
-      xlarge: 1.5rem,
+      xlarge: 1.25rem,
+      xxlarge: 1.5rem,
+      xxxlarge: 2rem,
+    ),
+    fluid-size: (
+      small: clamp(0.75rem, 1.5vw, 1rem),
+      regular: clamp(1rem, 2vw, 1.5rem),
+      large: clamp(1.5rem, 3vw, 2.5rem),
+    ),
+  ),
+  border: (
+    width: (
+      main: 1px,
+      alt: 2px,
+    ),
+    radius: (
+      main: 3px,
+      alt: 8px,
     ),
   ),
   animation: (
@@ -37,7 +75,20 @@ $variables: (
       slow: 300ms,
       xslow: 400ms,
     ),
-    cubic-bezier: cubic-bezier(0.47, 1.64, 0.41, 0.8),
+    timing-function: (
+      cubic-bezier: cubic-bezier(0.47, 1.64, 0.41, 0.8),
+    ),
+  ),
+  aspect-ratio: (
+    square: 1,
+    landscape: math.div(4, 3),
+    portrait: math.div(3, 4),
+    widescreen: math.div(16, 9),
+    ultrawide: math.div(18, 5),
+    golden-ratio: 1.618,
+  ),
+  z-index: (
+    important: 2147483647,
   ),
 );
 
