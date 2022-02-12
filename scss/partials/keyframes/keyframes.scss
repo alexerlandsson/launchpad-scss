@@ -1,14 +1,12 @@
 /// Global keyframes to use in multiple materials
 
-@use "../../helpers/mixin" as *;
-
-@include keyframes(no-transform) {
+@keyframes no-transform {
   100% {
-    @include transform(none);
+    transform: none;
   }
 }
 
-@include keyframes(fade-in) {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }

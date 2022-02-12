@@ -6,7 +6,7 @@
 .demo {
   --demo-css-variable: #{size(2)}; // Set a CSS custom property
 
-  @include flex-display; // Set prefixes using mixins
+  @include flex-display; // Set prefixes using mixins (optional)
   @include font-medium; // Set font using font mixins
 
   padding: size(2); // Set spacing or size using size()
