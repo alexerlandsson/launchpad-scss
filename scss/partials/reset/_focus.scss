@@ -13,11 +13,7 @@
 }
 
 // Add custom default focus to focusable elements
-a,
-button,
-input,
-select,
-textarea {
+:where(a, button, input, select, textarea) {
   @include focus {
     outline: 2px solid color(focus, main);
   }
