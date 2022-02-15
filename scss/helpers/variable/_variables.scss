@@ -4,6 +4,7 @@
 
 @use "sass:map";
 @use "sass:math";
+@use "sass:list";
 @use "../function" as *;
 
 $container-max-width: 650px;
@@ -80,15 +81,15 @@ $variables: (
     ),
   ),
   aspect-ratio: (
-    square: 1,
-    landscape: math.div(4, 3),
-    portrait: math.div(3, 4),
-    widescreen: math.div(16, 9),
-    ultrawide: math.div(18, 5),
-    golden-ratio: 1.618,
+    square: list.slash(1, 1),
+    landscape: list.slash(4, 3),
+    portrait: list.slash(3, 4),
+    widescreen: list.slash(16, 9),
+    ultrawide: list.slash(18, 5),
+    golden-ratio: list.slash(1.618, 1),
   ),
   z-index: (
-    important: 2147483647,
+    important: 2147483647, // Maximum value of 32-bit integer
   ),
 );
 
