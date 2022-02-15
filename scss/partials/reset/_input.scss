@@ -1,6 +1,7 @@
 /// Reset styling on input elements
 
 :where(input, textarea, select) {
+  margin: 0;
   font: inherit;
 }
 

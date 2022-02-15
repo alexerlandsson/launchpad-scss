@@ -6,25 +6,25 @@
 @use "sass:map";
 
 // Positions
-$_position-inline-x: left, center, right;
-$_position-inline-y: top, middle, bottom;
-$_position-inline-all: list.join($_position-inline-x, $_position-inline-y, $separator: comma);
-$_position-block-x: left, right;
-$_position-block-y: top, bottom;
-$_position-block-all: list.join($_position-block-x, $_position-block-y, $separator: comma);
+$position-inline-x: left, center, right;
+$position-inline-y: top, middle, bottom;
+$position-inline-all: list.join($position-inline-x, $position-inline-y, $separator: comma);
+$position-block-x: left, right;
+$position-block-y: top, bottom;
+$position-block-all: list.join($position-block-x, $position-block-y, $separator: comma);
 
 // This map is used to declare constants
 $constants: (
   position: (
     inline: (
-      x: $_position-inline-x,
-      y: $_position-inline-y,
-      all: $_position-inline-all,
+      x: $position-inline-x,
+      y: $position-inline-y,
+      all: $position-inline-all,
     ),
     block: (
-      x: $_position-block-x,
-      y: $_position-block-y,
-      all: $_position-block-all,
+      x: $position-block-x,
+      y: $position-block-y,
+      all: $position-block-all,
     ),
     flexbox: (
       flex-start,

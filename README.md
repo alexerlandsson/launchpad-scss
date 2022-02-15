@@ -191,7 +191,7 @@ These constants could be useful when positioning a modular component for intance
 }
 ```
 
-The example above refers to the variable `$_position-inline-x` used in the `$contants` map:
+The example above refers to the variable `$position-inline-x` used in the `$contants` map:
 
 ```scss
 $_position-inline-x: left, center, right; // This variable is not exposed using @forward
@@ -239,7 +239,7 @@ Components that are used for layout purposes only should be placed in `materials
 
 ### partials
 
-Partials contains styling aimed at elements and global styling, such as base styling, keyframes and reset _CSS_.
+Partials contains styling aimed at elements and global styling, such as base styling, focus, keyframes and reset _CSS_.
 
 ## Work in this repository
 

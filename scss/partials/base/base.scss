@@ -2,30 +2,15 @@
 
 @use "../../helpers" as *;
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
 html {
-  @include text-size-adjust(100%); // Prevent font scaling in landscape while allowing user zoom
-
   font-size: 100%;
 }
 
 body {
   @include font-regular;
 
-  margin: 0;
   background-color: color(bg, main);
   font-size: scss-var(font, size, regular);
   line-height: scss-var(font, line-height, main);
   color: color(text, main);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @supports (font-size-adjust: 1) {
-    font-size-adjust: 0.5;
-  }
 }

@@ -1,0 +1,5 @@
+/// Reset styling to increase accessibility
+
+:where([aria-disabled="true" i], [disabled]) {
+  cursor: not-allowed;
+}
