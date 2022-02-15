@@ -4,6 +4,7 @@
 
 @mixin text-size-adjust($value: auto) {
   -webkit-text-size-adjust: $value;
+  -moz-text-size-adjust: $value;
   text-size-adjust: $value;
 }
 
