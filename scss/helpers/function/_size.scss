@@ -1,11 +1,11 @@
 /// Size function used to set sizes in the project with
-/// a multiplier based on the $baseUnit.
+/// a multiplier based on the $base-unit.
 
 @use "sass:meta";
 
-@function size($multiplier: 1, $baseUnit: 8px) {
+@function size($multiplier: 1, $base-unit: 8px) {
   @if meta.type-of($multiplier) == number {
-    @return ($baseUnit * $multiplier);
+    @return ($base-unit * $multiplier);
   } @else {
     @error "Size '#{$multiplier}' has to be a number.";
   }
