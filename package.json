@@ -1,5 +1,5 @@
 {
-  "name": "scss-boilerplate",
+  "name": "launchpad-scss",
   "version": "2.4.0",
   "description": "Boilerplate for Sass (scss).",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@personal.github.com:alexerlandsson/scss-boilerplate.git"
+    "url": "git@personal.github.com:alexerlandsson/launchpad-scss.git"
   },
   "author": "",
   "license": "MIT",

@@ -1,6 +1,6 @@
-# SCSS Boilerplate
+# 🧑‍🚀 Launchpad SCSS
 
-This is my boilerplate for _Sass (scss)_ I use in projects to maintain a well structured and scalable _CSS_.
+_Launchpad_ is a boilerplate for _Sass (scss)_ used in projects to maintain a well structured and scalable _CSS_.
 
 It is a well tested architecture that works in projects of any size, from small single-page applications to large enterprise e-commerce.
 
