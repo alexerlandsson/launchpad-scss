@@ -1,6 +1,6 @@
 # 🧑‍🚀 Launchpad SCSS
 
-_Launchpad_ is a boilerplate for _Sass (scss)_ used in projects to maintain a well structured and scalable _CSS_.
+_Launchpad SCSS_ is a boilerplate for _Sass (scss)_ used in projects to maintain a well structured and scalable _CSS_. Comes with basic functions, mixins and coding standards.
 
 It is a well tested architecture that works in projects of any size, from small single-page applications to large enterprise e-commerce.
 
