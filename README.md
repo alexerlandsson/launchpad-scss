@@ -131,6 +131,15 @@ The size is calculated using a multiplier and base unit. The base unit is set to
 }
 ```
 
+##### str-replace
+
+This is a basic function found in `helpers/function/_str-replace.scss` used for replacing substrings in a string. The functions takes `$string` (input string), `$search` (substring to be replaced) and `$replace` (string to replace `$search` with. Default `''`) as parameters.
+
+```scss
+$hex: #f5f5f5;
+$hex-digits: str-replace(#{$hex}, '#', ''); // f5f5f5
+```
+
 #### mixin
 
 This folder contains all global mixins used in the project. Mixins are primarily used to add prefix to properties, but there can also be other use cases.
@@ -194,12 +203,12 @@ These constants could be useful when positioning a modular component for intance
 The example above refers to the variable `$position-inline-x` used in the `$contants` map:
 
 ```scss
-$_position-inline-x: left, center, right; // This variable is not exposed using @forward
+$position-inline-x: left, center, right; // This variable is not exposed using @forward
 
 $contants: (
   position: (
     inline: (
-      x: $_position-inline-x,
+      x: $position-inline-x,
     ),
   ),
 );
