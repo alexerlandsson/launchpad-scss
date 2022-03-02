@@ -4,6 +4,8 @@ _Launchpad SCSS_ is a boilerplate for _Sass (scss)_ used in projects to maintain
 
 It is a well tested architecture that works in projects of any size, from small single-page applications to large enterprise e-commerce.
 
+> __Looking for a component library?__ [🚀 Rocket SCSS](https://github.com/alexerlandsson/rocket-scss) is a minimal component libary built on _Launchpad SCSS_ used to make the the start of a new project skyrocket.
+
 ## Methodology
 
 The design of this boilerplate is based on the _CSS_ mothodology **BEM**.
