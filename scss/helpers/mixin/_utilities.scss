@@ -1,4 +1,9 @@
-// Utility mixins
+/// Utility mixins
+
+@use "sass:list";
+@use "sass:meta";
+@use "sass:map";
+@use "../breakpoint" as breakpoint;
 
 // Remove outer vertical margins from first and last direct child
 @mixin remove-direct-child-outer-margins {
@@ -11,4 +16,23 @@
       margin-bottom: 0;
     }
   }
+}
+
+// Generate breakpoint specific classes from a selector
+@mixin breakpoint-classes($filter: map.keys(breakpoint.$breakpoints)) {
+  // Loop each breakpoint in $breakpoints to create it's unique selector
+  // The selectors uses the format ":[BREAKPOINT_NAME]"
+  @each $breakpoint, $media-query in breakpoint.$breakpoints {
+    // Check if breakpoint is included in $filter
+    @if list.index($filter, $breakpoint) {
+      // Use :is() with #breakpoint-important to increase specificity
+      :is(&\:#{$breakpoint}, #breakpoint-important) {
+        @media #{meta.inspect($media-query)} {
+          @content;
+        }
+      }
+    }
+  }
+
+  @content;
 }

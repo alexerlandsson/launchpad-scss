@@ -12,8 +12,12 @@
   padding: size(2); // Set spacing or size using size()
   margin: var(--demo-css-variable); // Use of CSS custom properties
   background-color: color(primary, main); // Set color using color()
-  color: color(primary, text); // Set color using color()
   line-height: scss-var(font, line-height, main); // Set variables using scss-var()
+
+  // Generate breakpoint specific classes for "sm" and "lt-sm"
+  @include breakpoint-classes((sm, lt-sm)) {
+    color: color(primary, text); // Set color using color()
+  }
 
   // Use const() to loop position modifiers
   @each $value in const(position, inline, x) {
