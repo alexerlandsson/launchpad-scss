@@ -18,6 +18,16 @@
   }
 }
 
+// Hide scrollbar in scrollable elements
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 // Generate breakpoint specific classes from a selector
 @mixin breakpoint-classes($filter: map.keys(breakpoint.$breakpoints)) {
   // Loop each breakpoint in $breakpoints to create it's unique selector
