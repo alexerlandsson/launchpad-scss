@@ -35,4 +35,12 @@
       background-color: color(bg, alt);
     }
   }
+
+  &::before {
+    // Set language specific strings as content in psuedo elements
+    @include translate-psuedo-content((
+      en: "English translation",
+      se: "Svensk översättning"
+    ));
+  }
 }

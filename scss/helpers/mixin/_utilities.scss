@@ -3,6 +3,7 @@
 @use "sass:list";
 @use "sass:meta";
 @use "sass:map";
+@use "sass:string";
 @use "../breakpoint" as breakpoint;
 
 // Remove outer vertical margins from first and last direct child
@@ -45,4 +46,17 @@
   }
 
   @content;
+}
+
+// Translate psuedo element content
+@mixin translate-psuedo-content($translation-map) {
+  @if meta.type-of($translation-map) == map {
+    @each $locale, $string in $translation-map {
+      [lang="#{string.quote($locale)}"] & {
+        content: "#{$string}";
+      }
+    }
+  } @else {
+    @error "Translations needs to be set using a map where key is set to locale and value to the translated string.";
+  }
 }
