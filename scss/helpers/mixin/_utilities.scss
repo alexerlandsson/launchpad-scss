@@ -29,9 +29,9 @@
 }
 
 // Generate breakpoint specific classes from a selector
+// The selectors uses the format "[SELECTOR]:[BREAKPOINT_NAME]", example: ".foo:sm".
 @mixin breakpoint-classes($filter: map.keys(breakpoint.$breakpoints)) {
   // Loop each breakpoint in $breakpoints to create it's unique selector
-  // The selectors uses the format ":[BREAKPOINT_NAME]"
   @each $breakpoint, $media-query in breakpoint.$breakpoints {
     // Check if breakpoint is included in $filter
     @if list.index($filter, $breakpoint) {
@@ -47,12 +47,18 @@
   @content;
 }
 
-// Translate psuedo element content
+// Translate psuedo element content depending on [lang] set on html node
+// Map example: (en: "string", sv: "string", none: "string")
+// Use locale name "none" to set a fallback value if html[lang] is not set
 @mixin translate-psuedo-content($translation-map) {
   @if meta.type-of($translation-map) == map {
     @each $locale, $string in $translation-map {
-      [lang="#{$locale}"] & {
+      @if $locale == "none" {
         content: "#{$string}";
+      } @else {
+        html[lang="#{$locale}"] & {
+          content: "#{$string}";
+        }
       }
     }
   } @else {
