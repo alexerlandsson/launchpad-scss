@@ -1,4 +1,11 @@
+/// Reset styling on typography
+
 @use "../../helpers" as *;
+
+:where(#{const(headings)}) {
+  font: inherit;
+  margin: 0;
+}
 
 :where(b, strong) {
   @include font-bold;
