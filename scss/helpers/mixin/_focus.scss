@@ -1,15 +1,17 @@
+@use "sass:string";
+
 /// Mixins used to add focus to elements
 
-@mixin focus {
+@mixin focus($selector-focus-visible: ":focus-visible", $selector-focus: ":focus") {
   @supports selector(:focus-visible) {
-    &:focus-visible {
+    &#{string.unquote($selector-focus-visible)} {
       @content;
     }
   }
 
   // Safari & IE11
   @supports not selector(:focus-visible) {
-    &:focus {
+    &#{string.unquote($selector-focus)} {
       @content;
     }
   }

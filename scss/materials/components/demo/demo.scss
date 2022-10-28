@@ -38,10 +38,12 @@
 
   &::before {
     // Set language specific strings as content in psuedo elements depending on html[lang]
-    @include translate-psuedo-content((
-      en: "English translation",
-      se: "Svensk översättning",
-      none: "Fallback value" // Use none as key for fallback value when html[lang] is not set
-    ));
+    @include translate-psuedo-content(
+      (
+        en: "English translation",
+        se: "Svensk översättning",
+        none: "Fallback value" // Use none as key for fallback value when html[lang] is not set,
+      )
+    );
   }
 }
