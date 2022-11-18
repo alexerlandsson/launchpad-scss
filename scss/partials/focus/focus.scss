@@ -14,8 +14,13 @@
 }
 
 // Add custom default focus to focusable elements
-:where(a, button, input, select, textarea) {
+:where(a, button, input, select, textarea, summary) {
+  --focus-outline-size: max(2px, 0.08em);
+  --focus-outline-style: solid;
+  --focus-outline-color: #{color(focus, main)};
+
   @include focus {
-    outline: 2px solid color(focus, main);
+    outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+    outline-offset: var(--focus-outline-offset, var(--focus-outline-size));
   }
 }
