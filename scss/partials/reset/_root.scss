@@ -8,13 +8,6 @@
   box-sizing: border-box;
 }
 
-:where(:root) {
-  // Focus outline styles
-  --focus-outline-size: max(2px, 0.08em);
-  --focus-outline-style: solid;
-  --focus-outline-color: #{color(focus, main)};
-}
-
 :where(html) {
   @include text-size-adjust(100%); // Prevent font scaling in landscape while allowing user zoom
 }
