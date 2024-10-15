@@ -16,7 +16,9 @@
 
   // Generate breakpoint specific classes for "sm" and "lt-sm"
   @include breakpoint-classes((sm, lt-sm)) {
-    color: color(primary, text); // Set color using color()
+    & {
+      color: color(primary, text); // Set color using color()
+    }
   }
 
   // Use const() to loop position modifiers
