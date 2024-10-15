@@ -1,8 +1,7 @@
 @use "sass:string";
 
 /// Mixins used to add focus to elements
-
-@mixin focus($selector-focus-visible: ":focus-visible", $selector-focus: ":focus") {
+@mixin focus-selector($selector-focus-visible: ":focus-visible", $selector-focus: ":focus") {
   @supports selector(:focus-visible) {
     &#{string.unquote($selector-focus-visible)} {
       @content;
@@ -15,4 +14,10 @@
       @content;
     }
   }
+}
+
+// Mixin used to add default focus styling
+@mixin focus-styling {
+  outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset, var(--focus-outline-size));
 }

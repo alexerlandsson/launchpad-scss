@@ -9,7 +9,10 @@
 }
 
 :where(:root) {
-  -webkit-tap-highlight-color: transparent;
+  // Focus outline styles
+  --focus-outline-size: max(2px, 0.08em);
+  --focus-outline-style: solid;
+  --focus-outline-color: #{color(focus, main)};
 }
 
 :where(html) {
@@ -20,8 +23,5 @@
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @supports (font-size-adjust: 1) {
-    font-size-adjust: 0.5;
-  }
+  -webkit-tap-highlight-color: transparent;
 }
